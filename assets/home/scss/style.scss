@@ -323,10 +323,7 @@ section{
     bottom: 0% !important;
   }
   .scroll-down{
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-name: scroll;
+    
     font-size: 30px;
     font-weight: bold;
   }
@@ -334,6 +331,5 @@ section{
     padding-top: 56.25%;
     background: url("../images/doctors.png") center no-repeat;
   }
-
 }
 
