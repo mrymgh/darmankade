@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="پلتفرم درمانکده به عنوان سیستم نوبت دهی مطب پزشکان این فرصت را برای شما فراهم می‌سازد تا به سادگی و تنها با چند کلیک درخواست نوبت دهی آنلاین خود را برای تخصص ‌‌های مختلف ثبت کنید.">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/home/css/style.css">
+    <title>درمانکده</title>
+</head>
+<body dir="rtl" class="text-right">
+<div id="app">
+
+</div>
+<!--first section-->
+<section id="first-section">
+    <div class="container-fluid menu h-100">
+        <div class="row">
+            <div class="container d-flex align-items-center menu py-3">
+                <div class="logo position-relative float-right my-auto">
+                    <a href="#" class="" title="درمانکده"><img class="h-100" src="assets/home/images/darmankade.png" alt="درمانکده"></a>
+                </div>
+                <div class="d-inline-block float-right position-relative mx-3 my-auto" id="includedContent">
+                    <nav class="navbar my-auto navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav list-inline text-right nav-menu pr-0" id="header-menu">
+                                <a class="nav-item nav-link text-black px-3 border-left" v-for="menu in menus" v-bind:title="menu" href="#"><li> {{menu}} </li></a>
+                            </ul>
+                            <!--                  <a class="nav-item nav-link text-black px-3 border-left" href="#">بیمارستان ها</a>-->
+                            <!--                <a class="nav-item nav-link text-black px-3 border-left" href="#">داروها</a>-->
+                            <!--                <a class="nav-item nav-link text-black px-3 border-left" href="#">تست سلامت</a>-->
+                            <!--                <a class="nav-item nav-link text-black px-3 border-left" href="#">گروه های خونی</a>-->
+                            <!--                <a class="nav-item nav-link text-black px-3" href="#">   مجله سلامت درمانکده<i data-feather="chevron-down" class="mr-3"></i><span class="px-2"> </span></a>-->
+                        </div>
+                    </nav>
+                </div>
+                <div class="position-relative float-left mr-auto ml-0 register">
+                    <button class="btn btn-outline-primary text-medium rounded-20 pl-4"><i data-feather="user"></i>  ورود/ ثبت نام </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="search w-100 text-center">
+                    <h2 class=" position-relative search-title d-block">با درمانکده بهترین پزشک رو پیدا کن و آنلاین نوبت بگیر</h2>
+                    <div class="input-group search-input mx-auto">
+                        <input type="text" class="form-control rounded position-absolute w-100 d-inline-block border-left-0 text-small text-gray-200" placeholder=" جستجوی نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                        <div class="input-group-append  position-relative mr-auto">
+                            <div class="dropdown h-100 bg-white border-top primary-size border-bottom">
+                                <button class="btn h-100 dropdown-toggle border-right" type="button" data-toggle="dropdown">
+                                    <span class="caret ml-5 text-gray-200"><i data-feather="map-pin" class="ml-3"></i> تهران </span></button>
+                                <ul class="dropdown-menu px-3 inner text-right overflow-auto primary-size" id="cities-list">
+                                    <li v-for="city in cities"><a href="#">{{city}}</a></li>
+                                    <!--                    <li v-for=""><a href="#">اصفهان</a></li>-->
+                                    <!--                    <li v-for=""><a href="#">مشهد</a></li>-->
+                                    <!--                    <li v-for=""><a href="#">اراک</a></li>-->
+                                    <!--                    <li v-for=""><a href="#">بیرجند</a></li>-->
+                                    <!--                    <li v-for=""><a href="#">بوشهر</a></li>-->
+                                </ul>
+
+                            </div>
+                            <button type="submit" class="btn px-2 btn-primary text-white search-btn rounded-left primary-size">جستجو</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="position-relative popular-search d-flex justify-content-between w-100">
+                    <div class="row w-100 text-center justify-content-between">
+                        <div class="col-md-4 col-12 d-inline-block">
+                            <div class="row">
+                                <div class="col-4 px-3 most-popular text-center d-inline-block">
+                                    <a class="text-gray-200" title="کلیه" href="#">
+                                        <div class="popular-title">
+                                            <span class="py-3 text-small"> کلیه </span>
+                                            <i data-feather="arrow-up"></i>
+                                        </div>
+                                        <div class="circle shadow my-3 bg-white border">
+                                            <img src="assets/home/images/012-bone.png" alt="کلیه">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-4 px-3 most-popular text-center d-inline-block">
+                                    <a class="text-gray-200" title="مغز واعصاب" href="#">
+                                        <div class="popular-title">
+                                            <span class="py-3 text-small"> مغز و اعصاب </span>
+                                            <i data-feather="arrow-up"></i>
+                                        </div>
+                                        <div class="circle shadow my-3 bg-white border">
+                                            <img src="assets/home/images/018-fetus.png" alt="مغز واعصاب">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-4 px-3 most-popular text-center d-inline-block">
+                                    <a class="text-gray-200" title="قلب" href="#">
+                                        <div class="popular-title">
+                                            <span class="py-3 text-small"> قلب </span>
+                                            <i data-feather="arrow-up"></i>
+                                        </div>
+                                        <div class="circle shadow my-3 bg-white border">
+                                            <img src="assets/home/images/057-lungs.png" alt="قلب">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12 d-inline-block">
+                            <div class="row">
+                                <div class="col-4 px-23 most-popular text-center d-inline-block">
+                                    <a class="text-gray-200" title="کلیه" href="#">
+                                        <div class="popular-title">
+                                            <span class="py-3 text-small"> کلیه </span>
+                                            <i data-feather="arrow-up"></i>
+                                        </div>
+                                        <div class="circle shadow my-3 bg-white border">
+                                            <img src="assets/home/images/012-bone.png" alt="کلیه">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-4 px-23 most-popular text-center d-inline-block">
+                                    <a class="text-gray-200" title="مغز واعصاب" href="#">
+                                        <div class="popular-title">
+                                            <span class="py-3 text-small"> مغز و اعصاب </span>
+                                            <i data-feather="arrow-up"></i>
+                                        </div>
+                                        <div class="circle shadow my-3 bg-white border">
+                                            <img src="assets/home/images/018-fetus.png" alt="مغز واعصاب">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-4 px-3 most-popular text-center d-inline-block">
+                                    <a class="text-gray-200" tle="قلب" href="#">
+                                        <div class="popular-title">
+                                            <span class="py-3 text-small"> قلب </span>
+                                            <i data-feather="arrow-up"></i>
+                                        </div>
+                                        <div class="circle shadow my-3 bg-white border">
+                                            <img src="assets/home/images/057-lungs.png" alt="قلب">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12 d-inline-block">
+                            <div class="row">
+                                <div class="col-4 px-3 most-popular text-center d-inline-block">
+                                    <a class="text-gray-200" title="کلیه" href="#">
+                                        <div class="popular-title">
+                                            <span class="py-3 text-small"> کلیه </span>
+                                            <i data-feather="arrow-up"></i>
+                                        </div>
+                                        <div class="circle shadow my-3 bg-white border">
+                                            <img src="assets/home/images/012-bone.png" alt="کلیه">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-4 px-3 most-popular text-center d-inline-block">
+                                    <a class="text-gray-200" title="مغز واعصاب" href="#">
+                                        <div class="popular-title">
+                                            <span class="py-3 text-small"> مغز و اعصاب </span>
+                                            <i data-feather="arrow-up"></i>
+                                        </div>
+                                        <div class="circle shadow my-3 bg-white border">
+                                            <img src="assets/home/images/018-fetus.png" alt="مغز واعصاب">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-4 px-3 most-popular text-center d-inline-block">
+                                    <a class="text-gray-200" tle="قلب" href="#">
+                                        <div class="popular-title">
+                                            <span class="py-3 text-small"> قلب </span>
+                                            <i data-feather="arrow-up"></i>
+                                        </div>
+                                        <div class="circle shadow my-3 bg-white border">
+                                            <img src="assets/home/images/057-lungs.png" alt="قلب">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--second section-->
+<section id="second-section">
+    <div class="container">
+        <div class="row h-25 py-3">
+            <h2 class="mx-auto"> برترین سرویس های درمانکده </h2>
+        </div>
+        <div class="row h-75">
+            <div class="col-6 py-3">
+                <div class="border rounded-20 h-100 best-service" id="best-service1">
+                    <div class="description p-4 text-justify h-100 bg-white text-right rounded-20" id="description1">
+                        <h4 class="title text-black"> یک ویزیت رایگان مهمان درمانکده </h4>
+                        <p class="py-3 text-gray-200"> لورم ایپسوم متن ساختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی </p>
+                        <a href="" class="btn btn-primary position-relative float-left">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 py-3" href="#">
+                <div class="border rounded-20 h-100 best-service" id="best-service2">
+                    <div class="description p-4 text-justify bg-white h-100 text-right rounded-20" id="description2">
+                        <h4 class="title text-black"> یک ویزیت رایگان مهمان درمانکده </h4>
+                        <p class="py-3 text-gray-200"> لورم ایپسوم متن ساختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی </p>
+                        <a href="" class="btn btn-primary position-relative float-left">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 py-3" href="#">
+                <div class="border rounded-20 h-100 best-service" id="best-service3">
+                    <div class="description p-4 text-justify bg-white h-100 text-right rounded-20" id="description3">
+                        <h4 class="title text-black"> یک ویزیت رایگان مهمان درمانکده </h4>
+                        <p class="py-3 text-gray-200"> لورم ایپسوم متن ساختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی </p>
+                        <a href="" class="btn btn-primary position-relative float-left">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 py-3" href="#">
+                <div class="border rounded-20 h-100 best-service" id="best-service4">
+                    <div class="description p-4 text-justify bg-white h-100 text-right rounded-20" id="description4">
+                        <h4 class="title text-black"> یک ویزیت رایگان مهمان درمانکده </h4>
+                        <p class="py-3 text-gray-200"> لورم ایپسوم متن ساختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی </p>
+                        <a href="" class="btn btn-primary position-relative float-left">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--third section-->
+<section class="third-section py-auto w-100" id="third-section">
+    <div class="container py-5">
+        <div class="row px-3 comments">
+            <div class="col-6 bold-comment position-relative my-auto text-center text-justify">
+                <h4 class="text-black title py-3"> نظرات و روند درمانی بیماران </h4>
+                <p class="comment"> اختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی بودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساخت بودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساخت </p>
+                <a href="" class="btn btn-primary rounded-20 px-3">  مشاهده و جستجو همه نظرات <i data-feather="chevron-left"></i></a>
+            </div>
+            <div class="col-6 box-comments position-relative my-auto">
+                <div id="carouselExampleIndicators" class="carousel my-auto slide " data-ride="carousel">
+                    <div class="border rounded-20 border-blue">
+                        <div class="carousel-inner h-100 text-small p-4">
+                            <div class="row px-3 mb-3 text-right">
+                                <i data-feather="message-circle" class="text-primary"></i>
+                                <i data-feather="message-circle" class="text-primary"></i>
+                            </div>
+                            <div class="carousel-item active">
+                                <p> مطب خانوم دکتر واقعا شلوغ و پر از مریض هست ولی واقعا ارزش داره ادم انتظار بکشه برای صحبت با ایشون چون هم طبابت عالی دارند و هم با لبخند و ارامششون همه رو اروم میکنن </p>
+                                <div class="row align-items-center py-2 justify-content-between">
+                                    <div class="profile-picture  rounded-circle">
+                                        <a href=""><img class="rounded-circle border border-blue" src="./assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
+                                    </div>
+                                    <div class="profile-description mr-3 ml-auto my-auto">
+                                        <h5 class=""> دکتر ربابه مقصودی </h5>
+                                        <P class="text-small"> جراح پلاستیک </P>
+                                    </div>
+                                    <div class="more-comment my-auto px-3 position-relative float-left ml-0">
+                                        <a href="../" class="btn btn-outline-primary rounded-20 text-small px-3" style="left:0px; "> مشاهده سایر نظرات </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <p> مطب خانوم دکتر واقعا شلوغ و پر از مریض هست ولی واقعا ارزش داره ادم انتظار بکشه برای صحبت با ایشون چون هم طبابت عالی دارند و هم با لبخند و ارامششون همه رو اروم میکنن </p>
+                                <div class="row align-items-center py-2 justify-content-between">
+                                    <div class="profile-picture  rounded-circle">
+                                        <a href=""><img class="rounded-circle border border-blue" src="./assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
+                                    </div>
+                                    <div class="profile-description mr-3 ml-auto my-auto">
+                                        <h5 class=""> دکتر ربابه مقصودی </h5>
+                                        <P class="text-small"> جراح پلاستیک </P>
+                                    </div>
+                                    <div class="more-comment my-auto px-3 position-relative float-left ml-0">
+                                        <a href="../" class="btn btn-outline-primary rounded-20 text-small px-3" style="left:0px; "> مشاهده سایر نظرات </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <p> مطب خانوم دکتر واقعا شلوغ و پر از مریض هست ولی واقعا ارزش داره ادم انتظار بکشه برای صحبت با ایشون چون هم طبابت عالی دارند و هم با لبخند و ارامششون همه رو اروم میکنن </p>
+                                <div class="row align-items-center py-2 justify-content-between">
+                                    <div class="profile-picture  rounded-circle">
+                                        <a href=""><img class="rounded-circle border border-blue" src="./assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
+                                    </div>
+                                    <div class="profile-description mr-3 ml-auto my-auto">
+                                        <h5 class=""> دکتر ربابه مقصودی </h5>
+                                        <P class="text-small"> جراح پلاستیک </P>
+                                    </div>
+                                    <div class="more-comment my-auto px-3 position-relative float-left ml-0">
+                                        <a href="../" class="btn btn-outline-primary rounded-20 text-small px-3" style="left:0px; "> مشاهده سایر نظرات </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <p> مطب خانوم دکتر واقعا شلوغ و پر از مریض هست ولی واقعا ارزش داره ادم انتظار بکشه برای صحبت با ایشون چون هم طبابت عالی دارند و هم با لبخند و ارامششون همه رو اروم میکنن </p>
+                                <div class="row align-items-center py-2 justify-content-between">
+                                    <div class="profile-picture  rounded-circle">
+                                        <a href=""><img class="rounded-circle border border-blue" src="./assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
+                                    </div>
+                                    <div class="profile-description mr-3 ml-auto my-auto">
+                                        <h5 class=""> دکتر ربابه مقصودی </h5>
+                                        <P class="text-small"> جراح پلاستیک </P>
+                                    </div>
+                                    <div class="more-comment my-auto px-3 position-relative float-left ml-0">
+                                        <a href="../" class="btn btn-outline-primary rounded-20 text-small px-3" style="left:0px; "> مشاهده سایر نظرات </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators mr-0 mb-0 mt-4 position-relative">
+                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-2" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-2" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-2" data-slide-to="3"></li>
+                    </ol>
+                </div>
+                <div class="">
+                    <div class="shape position-relative text-left">
+                        <span class="text-small text-dark"> نظر محمد رضا </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--forth section-->
+<section id="forth-section">
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-6 nobat position-relative my-auto text-right justify-content-center">
+                <div class="py-5">
+                    <h5> دانلود اپلیکیشن درمانکده </h5>
+                    <p class="primary-size"> دریافت نوبت از بیش از 700 متخصص در تهران </p>
+                </div>
+                <h5> برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید </h5>
+                <form action="" class="form-inline text-right w-100 py-3" method="post">
+                    <input type="number" class="form-control w-50 rounded" placeholder=" مانند *******0912 ">
+                    <input type="submit" class="btn btn-primary rounded-20 mx-3 w-25 ml-auto" value="ارسال لینک">
+                </form>
+            </div>
+            <div class="col-6">
+                <div class="mobile2 w-50 position-absolute d-inline-block"></div>
+                <div class="mobile1 w-50 position-relative d-inline-block"></div>
+            </div>
+        </div>
+        <div class="text-center mb-3 mt-5">
+            <h5 class="title mx-auto"> به جمع درمانکده ای ها بپیوندید </h5>
+            <div class="row join-us pt-4">
+                <div class="col-4">
+                    <div>
+                        <img class="" src="./assets/home/images/receptionist.png" alt="منشی ها">
+                    </div>
+                    <a href="" class="btn btn-outline-primary rounded-20 w-50 my-3"> منشی ها </a>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <img class="" src="./assets/home/images/doctors.png" alt="پزشکان">
+                    </div>
+                    <a href="" class="btn btn-outline-primary rounded-20 w-50 my-3"> پزشکان </a>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <img class="" src="./assets/home/images/undraw_Building_vpxo.png" alt="درمانگاه ها">
+                    </div>
+                    <a href="" class="btn btn-outline-primary rounded-20 w-50 my-3"> درمانگاه ها </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--footer-->
+<section id="footer-section">
+    <footer>
+        <div class="container-fluid bg-blue">
+            <div class="container row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="descript text-center">
+                        <a href="#" class="d-block logo-footer"><img class="mx-auto py-3" src="assets/home/images/darmankade_Vector%20with%20heart.png" alt="درمانکده"></a>
+                        <p class="descript text-white text-small">سامانه نوبت دهی آنلاین مطب پزشکان و دندان پزشکان که شامل نوبت دهی و دانستنی های سلامت می باشد. شما با ورود به حساب کاربری خدمات بیشتری دریافت خواهید کرد. </p>
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-4 my-auto px-5">
+                    <ul class="list-unstyled text-white text-center text-medium px-5">
+                        <li class="border-top text-center py-2"><a class="text-white" href="">چرا درمانکده</a></li>
+                        <li class="border-top text-center py-2"><a class="text-white" href="">درباره ما</a></li>
+                        <li class="border-top text-center py-2"><a class="text-white" href="">تماس با ما</a></li>
+                        <li class="border-top text-center py-2"><a class="text-white" href="">وبلاگ درمانکده</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <div class="socials">
+                        <ul class="list-inline list-unstyled py-2 row justify-content-between px-5">
+                            <li class="social"><a href="../"> <i data-feather="instagram" class="text-white"></i> </a> </li>
+                            <li class="social"><a href=".."> <i data-feather="twitter" class="text-white"></i> </a></li>
+                            <li class="social"><a href=""> <i data-feather="linkedin" class="text-white"></i> </a> </li>
+                        </ul>
+                    </div>
+                    <div class="row text-center">
+                        <span class="border-right my-1 mx-auto line"></span>
+                    </div>
+                </div>
+                <div class="col-4 my-auto px-5">
+                    <ul class="list-unstyled text-white text-medium px-5">
+                        <li class="border-top text-center py-2"><a class="text-white" href="">راهنمای دریافت نوبت</a></li>
+                        <li class="border-top text-center py-2"><a class="text-white" href="">سوالات متداول</a></li>
+                        <li class="border-top text-center py-2"><a class="text-white" href="">قوانین و مقررات</a></li>
+                        <li class="border-top text-center py-2"><a class="text-white" href="">شکایت</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="row">
+                        <p class="text-justify text-center text-white text-small"> با ثبت‌نام در خبرنامه درمانکده، اولین نفری باشید که از جدیدترین خبرها، جشنواره‌ها و تخفیف های ویژه ما مطلع می‌شوید. </p>
+                    </div>
+                    <form action="index.html" class="row form-inline w-100" method="get">
+                        <input type="email" required class="w-100 form-control position-absolute rounded-20" placeholder="عضویت در خبرنامه">
+                        <input type="submit" class="position-relative w-25 px-2 btn form-control btn-secondary border-right rounded-left Newsletter-btn" value="ثبت ایمیل">
+                    </form>
+                    <div class="row py-3 text-center justify-content-center">
+                        <div class="bg-white border rounded-20 mx-3 py-2">
+                            <a href=""><img class="reliability" src="assets/home/images/logo.aspx@2x.png" alt="نماد اعتماد الکترونیکی"></a>
+                        </div>
+                        <div class="bg-white border rounded-20 mx-3 py-2">
+                            <a href=""><img class="reliability" src="assets/home/images/logo2.aspx.png" alt="نشان ملی ثبت نشانه های دیجیتال"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </footer>
+    <div class="copy-write bg-dark">
+        <div class="container row py-1 h-100 text-white">
+            <p class="float-right text-small d-flex align-items-center mb-0 ml-auto">تمامی حقوق این سایت برای درمانکده محفوظ است </p>
+            <p class="float-left text-small mb-0 mr-auto"> طراحی شده با <i data-feather="heart" class="text-danger"></i> توسط تیم درمانکده </p>
+        </div>
+    </div>
+</section>
+
+
+<script src="../../assets/js/jquery-3.4.1.min.js"></script>
+<script src="../../assets/js/popper.min.js"></script>
+<script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../src/feather.min.js"></script>
+<script src="../../assets/js/vue.min.js"></script>
+<script src="../../dist/build.js"></script>
+<script>
+
+</script>
+</body>
+</html>
