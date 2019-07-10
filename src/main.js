@@ -15,20 +15,34 @@ new Vue({
 
 feather.replace()
 
-new Vue ({
-  el: '#cities-list',
-  data: function () {
-    return {
-      cities : ['تهران','مشهد','قم','اراک','اصفهان','تبریز']
-    }
-  }
-});
-
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel();
 });
+$('.owl-carousel').owlCarousel({
+  rtl:true,
+  loop:true,
+  margin:10,
+  nav:false,
+  responsive:{
+    0:{
+      items:2
+    },
+    600:{
+      items:3
+    },
+    1000:{
+      items:5
+    }
+  }
+})
 
-
+// $('.collapse').on('shown.bs.collapse', function(){
+//   $(this).parent().find(".feather-plus").removeClass("d-inline-block").addClass("d-none");
+//   $(this).parent().find(".feather-minus").removeClass("d-none").addClass("d-inline-block");
+// }).on('hidden.bs.collapse', function(){
+//   $(this).parent().find(".feather-minus").removeClass("d-none").addClass("d-inline-block");
+//   $(this).parent().find(".feather-plus").removeClass("d-inline-block").addClass("d-none");
+// });
 
 
 

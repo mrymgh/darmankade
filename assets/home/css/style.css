@@ -41,6 +41,9 @@ body {
 .rounded-left-0 {
   border-top-left-radius: 0px; }
 
+.rounded-10 {
+  border-radius: 10px; }
+
 .w-80 {
   width: 80%; }
 
@@ -79,16 +82,15 @@ a {
     width: 58%;
     height: 50px;
     z-index: 150; }
-    .search .search-input input {
-      height: 50px; }
-      .search .search-input input ::-webkit-input-placeholder {
-        color: red !important; }
     .search .search-input .inner {
       overflow-y: auto;
       min-height: 5rem;
       max-height: 7rem; }
     .search .search-input .search-btn {
       width: 170px; }
+
+input.form-control.primary-size.h-100.rounded.position-absolute.w-100.d-inline-block.border-left-0.text-small.text-gray-200 {
+  z-index: 10; }
 
 .input-group-append {
   left: 0%;
@@ -249,12 +251,30 @@ section {
 .popular-search-mobile {
   bottom: 0%; }
 
+.owl-item {
+  margin: 0px 15px; }
+
+.mobile-pic {
+  width: 50%;
+  height: 160px;
+  background: url("../images/315.png") no-repeat;
+  background-size: contain; }
+
+.bg-blue-light {
+  background: #eefafc; }
+
+.icon-animation {
+  height: 70px; }
+
 @media (min-width: 10px) and (max-width: 575.98px) {
   .primary-size {
     font-size: 10px; }
 
   .logo {
     max-height: 40px; }
+
+  h5 {
+    font-size: 15px; }
 
   #first-section {
     background: url("../images/Path 4085.svg") right bottom no-repeat, url("../images/Path 4083.svg") left top no-repeat;
@@ -271,14 +291,79 @@ section {
     height: 50px !important; }
 
   .popular-search-mobile {
-    bottom: 0% !important; }
+    bottom: 0% !important;
+    z-index: 5; }
 
   .scroll-down {
     font-size: 30px;
     font-weight: bold; }
 
-  .consultation {
-    padding-top: 56.25%;
-    background: url("../images/doctors.png") center no-repeat; } }
+  .consultation, .visit {
+    height: 220px;
+    width: 100%;
+    background: url("../images/doctors.png") center no-repeat; }
+    .consultation a.rounded-box-link, .visit a.rounded-box-link {
+      top: 5%;
+      right: 5%; }
+
+  .visit {
+    background: url("../image-mobile/Symptom2.png") center no-repeat; }
+
+  owl-carousel {
+    max-height: 250px !important; }
+
+  .owl-stage-outer {
+    height: 200px; }
+
+  .reliability {
+    width: 91px; }
+
+  .chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite; }
+
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite; }
+
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite; }
+
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 35%;
+    background: #2fc2df; }
+
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg); }
+
+  .chevron:after {
+    right: 8px;
+    width: 35%;
+    transform: skew(0deg, -30deg); }
+
+  @keyframes move {
+    25% {
+      opacity: 1; }
+    33% {
+      opacity: 1;
+      transform: translateY(30px); }
+    67% {
+      opacity: 1;
+      transform: translateY(40px); }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5); } }
+  @keyframes pulse {
+    to {
+      opacity: 1; } } }
 
 /*# sourceMappingURL=style.css.map */
