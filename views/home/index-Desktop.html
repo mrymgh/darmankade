@@ -19,7 +19,7 @@
         <div class="row">
             <div class="container d-flex align-items-center menu py-3">
                 <div class="logo position-relative float-right my-auto">
-                    <a href="#" class="" title="درمانکده"><img class="h-100" src="assets/home/images/darmankade.png" alt="درمانکده"></a>
+                    <a href="#" class="" title="درمانکده"><img class="h-100" src="../../assets/home/images/darmankade.png" alt="درمانکده"></a>
                 </div>
                 <div class="d-inline-block float-right position-relative mx-3 my-auto" id="includedContent">
                     <nav class="navbar my-auto navbar-expand-lg">
@@ -39,9 +39,8 @@
                     </nav>
                 </div>
                 <div class="position-relative float-left mr-auto ml-0 register">
-                    <button class="btn btn-outline-primary text-medium rounded-20 pl-4"><i data-feather="user"></i>  ورود/ ثبت نام </button>
+                    <button class="btn btn-outline-primary text-medium rounded-20 px-4"><i data-feather="user"></i>  ورود/ ثبت نام </button>
                 </div>
-
             </div>
         </div>
         <div class="container">
@@ -49,12 +48,12 @@
                 <div class="search w-100 text-center">
                     <h2 class=" position-relative search-title d-block">با درمانکده بهترین پزشک رو پیدا کن و آنلاین نوبت بگیر</h2>
                     <div class="input-group search-input mx-auto">
-                        <input type="text" class="form-control rounded position-absolute w-100 d-inline-block border-left-0 text-small text-gray-200" placeholder=" جستجوی نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                        <input type="text" class="form-control rounded position-absolute h-100 w-100 d-inline-block border-left-0 text-small text-gray-200" placeholder=" جستجوی نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
                         <div class="input-group-append  position-relative mr-auto">
-                            <div class="dropdown h-100 bg-white border-top primary-size border-bottom">
+                            <div class="dropdown h-100 bg-white border-top text-mediumtext-medium border-bottom">
                                 <button class="btn h-100 dropdown-toggle border-right" type="button" data-toggle="dropdown">
                                     <span class="caret ml-5 text-gray-200"><i data-feather="map-pin" class="ml-3"></i> تهران </span></button>
-                                <ul class="dropdown-menu px-3 inner text-right overflow-auto primary-size" id="cities-list">
+                                <ul class="dropdown-menu px-3 inner text-right overflow-auto text-medium" id="cities-list">
                                     <li v-for="city in cities"><a href="#">{{city}}</a></li>
                                     <!--                    <li v-for=""><a href="#">اصفهان</a></li>-->
                                     <!--                    <li v-for=""><a href="#">مشهد</a></li>-->
@@ -64,11 +63,11 @@
                                 </ul>
 
                             </div>
-                            <button type="submit" class="btn px-2 btn-primary text-white search-btn rounded-left primary-size">جستجو</button>
+                            <button type="submit" class="btn px-2 btn-primary text-white search-btn rounded-left text-medium">جستجو</button>
                         </div>
                     </div>
                 </div>
-                <div class="position-relative popular-search d-flex justify-content-between w-100">
+                <div class="position-relative popular-search d-flex justify-content-between w-100" v-on:scroll="hide()">
                     <div class="row w-100 text-center justify-content-between">
                         <div class="col-md-4 col-12 d-inline-block">
                             <div class="row">
@@ -79,8 +78,9 @@
                                             <i data-feather="arrow-up"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
-                                            <img src="assets/home/images/012-bone.png" alt="کلیه">
+                                            <img src="../../assets/home/images/012-bone.png" alt="کلیه">
                                         </div>
+                                        <span class="line-shape"></span>
                                     </a>
                                 </div>
                                 <div class="col-4 px-3 most-popular text-center d-inline-block">
@@ -90,8 +90,9 @@
                                             <i data-feather="arrow-up"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
-                                            <img src="assets/home/images/018-fetus.png" alt="مغز واعصاب">
+                                            <img src="../../assets/home/images/018-fetus.png" alt="مغز واعصاب">
                                         </div>
+                                        <span class="line-shape"></span>
                                     </a>
                                 </div>
                                 <div class="col-4 px-3 most-popular text-center d-inline-block">
@@ -101,8 +102,9 @@
                                             <i data-feather="arrow-up"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
-                                            <img src="assets/home/images/057-lungs.png" alt="قلب">
+                                            <img src="../../assets/home/images/057-lungs.png" alt="قلب">
                                         </div>
+                                        <span class="line-shape"></span>
                                     </a>
                                 </div>
                             </div>
@@ -116,8 +118,9 @@
                                             <i data-feather="arrow-up"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
-                                            <img src="assets/home/images/012-bone.png" alt="کلیه">
+                                            <img src="../../assets/home/images/012-bone.png" alt="کلیه">
                                         </div>
+                                        <span class="line-shape"></span>
                                     </a>
                                 </div>
                                 <div class="col-4 px-23 most-popular text-center d-inline-block">
@@ -127,8 +130,9 @@
                                             <i data-feather="arrow-up"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
-                                            <img src="assets/home/images/018-fetus.png" alt="مغز واعصاب">
+                                            <img src="../../assets/home/images/018-fetus.png" alt="مغز واعصاب">
                                         </div>
+                                        <span class="line-shape"></span>
                                     </a>
                                 </div>
                                 <div class="col-4 px-3 most-popular text-center d-inline-block">
@@ -138,8 +142,9 @@
                                             <i data-feather="arrow-up"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
-                                            <img src="assets/home/images/057-lungs.png" alt="قلب">
+                                            <img src="../../assets/home/images/057-lungs.png" alt="قلب">
                                         </div>
+                                        <span class="line-shape"></span>
                                     </a>
                                 </div>
                             </div>
@@ -153,8 +158,9 @@
                                             <i data-feather="arrow-up"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
-                                            <img src="assets/home/images/012-bone.png" alt="کلیه">
+                                            <img src="../../assets/home/images/012-bone.png" alt="کلیه">
                                         </div>
+                                        <span class="line-shape"></span>
                                     </a>
                                 </div>
                                 <div class="col-4 px-3 most-popular text-center d-inline-block">
@@ -164,8 +170,9 @@
                                             <i data-feather="arrow-up"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
-                                            <img src="assets/home/images/018-fetus.png" alt="مغز واعصاب">
+                                            <img src="../../assets/home/images/018-fetus.png" alt="مغز واعصاب">
                                         </div>
+                                        <span class="line-shape"></span>
                                     </a>
                                 </div>
                                 <div class="col-4 px-3 most-popular text-center d-inline-block">
@@ -175,8 +182,9 @@
                                             <i data-feather="arrow-up"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
-                                            <img src="assets/home/images/057-lungs.png" alt="قلب">
+                                            <img src="../../assets/home/images/057-lungs.png" alt="قلب">
                                         </div>
+                                        <span class="line-shape"></span>
                                     </a>
                                 </div>
                             </div>
@@ -191,17 +199,17 @@
 
 <!--second section-->
 <section id="second-section">
-    <div class="container">
-        <div class="row h-25 py-3">
-            <h2 class="mx-auto"> برترین سرویس های درمانکده </h2>
+    <div class="container py-4">
+        <div class="row h-25">
+            <h3 class="mx-auto"> برترین سرویس های درمانکده </h3>
         </div>
         <div class="row h-75">
             <div class="col-6 py-3">
-                <div class="border rounded-20 h-100 best-service" id="best-service1">
-                    <div class="description p-4 text-justify h-100 bg-white text-right rounded-20" id="description1">
+                <div class="border rounded-20 h-100 w-100 best-service">
+                    <div class="description p-4 text-justify h-100 bg-white text-right rounded-20">
                         <h4 class="title text-black"> یک ویزیت رایگان مهمان درمانکده </h4>
                         <p class="py-3 text-gray-200"> لورم ایپسوم متن ساختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی </p>
-                        <a href="" class="btn btn-primary position-relative float-left">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
+                        <a href="" class="btn btn-primary rounded-20 position-relative float-left pr-3">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
                     </div>
                 </div>
             </div>
@@ -210,7 +218,7 @@
                     <div class="description p-4 text-justify bg-white h-100 text-right rounded-20" id="description2">
                         <h4 class="title text-black"> یک ویزیت رایگان مهمان درمانکده </h4>
                         <p class="py-3 text-gray-200"> لورم ایپسوم متن ساختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی </p>
-                        <a href="" class="btn btn-primary position-relative float-left">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
+                        <a href="" class="btn btn-primary rounded-20 position-relative float-left pr-3">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
                     </div>
                 </div>
             </div>
@@ -219,7 +227,7 @@
                     <div class="description p-4 text-justify bg-white h-100 text-right rounded-20" id="description3">
                         <h4 class="title text-black"> یک ویزیت رایگان مهمان درمانکده </h4>
                         <p class="py-3 text-gray-200"> لورم ایپسوم متن ساختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی </p>
-                        <a href="" class="btn btn-primary position-relative float-left">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
+                        <a href="" class="btn btn-primary rounded-20 position-relative float-left pr-3">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
                     </div>
                 </div>
             </div>
@@ -228,7 +236,7 @@
                     <div class="description p-4 text-justify bg-white h-100 text-right rounded-20" id="description4">
                         <h4 class="title text-black"> یک ویزیت رایگان مهمان درمانکده </h4>
                         <p class="py-3 text-gray-200"> لورم ایپسوم متن ساختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی </p>
-                        <a href="" class="btn btn-primary position-relative float-left">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
+                        <a href="" class="btn btn-primary rounded-20 position-relative float-left pr-3">  مشاهده صفحه <i data-feather="chevron-left"></i></a>
                     </div>
                 </div>
             </div>
@@ -238,26 +246,41 @@
 
 <!--third section-->
 <section class="third-section py-auto w-100" id="third-section">
-    <div class="container py-5">
-        <div class="row px-3 comments">
-            <div class="col-6 bold-comment position-relative my-auto text-center text-justify">
-                <h4 class="text-black title py-3"> نظرات و روند درمانی بیماران </h4>
-                <p class="comment"> اختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی بودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساخت بودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساخت </p>
-                <a href="" class="btn btn-primary rounded-20 px-3">  مشاهده و جستجو همه نظرات <i data-feather="chevron-left"></i></a>
+    <div class="container pt-5">
+        <div class="row px-3 mt-4 comments">
+            <div class="col-6 bold-comment d-inline-block align-middle h-auto text-center text-justify">
+                <h4 class="text-black title"> نظرات و روند درمانی بیماران </h4>
+                <p class="comment my-auto"> اختگی. ممد نبودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساختگی بودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساخت بودی ببینی شهر آزاد گشت. من دارم متن تصادفی مینویسم. لورم ایپسوم متن ساخت </p>
+                <a href="" class="btn btn-primary mx-auto rounded-20 px-3">  مشاهده و جستجو همه نظرات <i data-feather="chevron-left"></i></a>
             </div>
-            <div class="col-6 box-comments position-relative my-auto">
+            <div class="col-6 box-comments h-100 position-relative">
                 <div id="carouselExampleIndicators" class="carousel my-auto slide " data-ride="carousel">
-                    <div class="border rounded-20 border-blue">
-                        <div class="carousel-inner h-100 text-small p-4">
+                    <div class="rounded-20 message-box border-top border-blue">
+                        <div class="carousel-inner p-4 h-100 text-small">
                             <div class="row px-3 mb-3 text-right">
                                 <i data-feather="message-circle" class="text-primary"></i>
                                 <i data-feather="message-circle" class="text-primary"></i>
                             </div>
                             <div class="carousel-item active">
                                 <p> مطب خانوم دکتر واقعا شلوغ و پر از مریض هست ولی واقعا ارزش داره ادم انتظار بکشه برای صحبت با ایشون چون هم طبابت عالی دارند و هم با لبخند و ارامششون همه رو اروم میکنن </p>
-                                <div class="row align-items-center py-2 justify-content-between">
+                                <div class="row mx-0 align-items-center py-2 justify-content-between">
                                     <div class="profile-picture  rounded-circle">
-                                        <a href=""><img class="rounded-circle border border-blue" src="./assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
+                                        <a href=""><img class="rounded-circle border border-blue" src="../../assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
+                                    </div>
+                                    <div class="profile-description mr-3 ml-auto my-auto">
+                                        <h5 class=""> دکتر ربابه مقصودی </h5>
+                                        <P class="text-small"> جراح پلاستیک </P>
+                                    </div>
+                                    <div class="more-comment my-auto px-3 position-relative float-left ml-0">
+                                        <a href="../" class="btn btn-outline-primary rounded-20 text-small px-3"> مشاهده سایر نظرات </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <p> مطب خانوم دکتر واقعا شلوغ و پر از مریض هست ولی واقعا ارزش داره ادم انتظار بکشه برای صحبت با ایشون چون هم طبابت عالی دارند و هم با لبخند و ارامششون همه رو اروم میکنن </p>
+                                <div class="row mx-0 align-items-center py-2 justify-content-between">
+                                    <div class="profile-picture  rounded-circle">
+                                        <a href=""><img class="rounded-circle border border-blue" src="../../assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
                                     </div>
                                     <div class="profile-description mr-3 ml-auto my-auto">
                                         <h5 class=""> دکتر ربابه مقصودی </h5>
@@ -270,9 +293,9 @@
                             </div>
                             <div class="carousel-item h-100">
                                 <p> مطب خانوم دکتر واقعا شلوغ و پر از مریض هست ولی واقعا ارزش داره ادم انتظار بکشه برای صحبت با ایشون چون هم طبابت عالی دارند و هم با لبخند و ارامششون همه رو اروم میکنن </p>
-                                <div class="row align-items-center py-2 justify-content-between">
+                                <div class="row mx-0 align-items-center py-2 justify-content-between">
                                     <div class="profile-picture  rounded-circle">
-                                        <a href=""><img class="rounded-circle border border-blue" src="./assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
+                                        <a href=""><img class="rounded-circle border border-blue" src="../../assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
                                     </div>
                                     <div class="profile-description mr-3 ml-auto my-auto">
                                         <h5 class=""> دکتر ربابه مقصودی </h5>
@@ -285,24 +308,9 @@
                             </div>
                             <div class="carousel-item h-100">
                                 <p> مطب خانوم دکتر واقعا شلوغ و پر از مریض هست ولی واقعا ارزش داره ادم انتظار بکشه برای صحبت با ایشون چون هم طبابت عالی دارند و هم با لبخند و ارامششون همه رو اروم میکنن </p>
-                                <div class="row align-items-center py-2 justify-content-between">
+                                <div class="row mx-0 align-items-center py-2 justify-content-between">
                                     <div class="profile-picture  rounded-circle">
-                                        <a href=""><img class="rounded-circle border border-blue" src="./assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
-                                    </div>
-                                    <div class="profile-description mr-3 ml-auto my-auto">
-                                        <h5 class=""> دکتر ربابه مقصودی </h5>
-                                        <P class="text-small"> جراح پلاستیک </P>
-                                    </div>
-                                    <div class="more-comment my-auto px-3 position-relative float-left ml-0">
-                                        <a href="../" class="btn btn-outline-primary rounded-20 text-small px-3" style="left:0px; "> مشاهده سایر نظرات </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item h-100">
-                                <p> مطب خانوم دکتر واقعا شلوغ و پر از مریض هست ولی واقعا ارزش داره ادم انتظار بکشه برای صحبت با ایشون چون هم طبابت عالی دارند و هم با لبخند و ارامششون همه رو اروم میکنن </p>
-                                <div class="row align-items-center py-2 justify-content-between">
-                                    <div class="profile-picture  rounded-circle">
-                                        <a href=""><img class="rounded-circle border border-blue" src="./assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
+                                        <a href=""><img class="rounded-circle border border-blue" src="../../assets/home/images/دکتر-رباب-مقصودی-متخصص-جراح-کلیه.png" alt="دکتر عباس "></a>
                                     </div>
                                     <div class="profile-description mr-3 ml-auto my-auto">
                                         <h5 class=""> دکتر ربابه مقصودی </h5>
@@ -316,30 +324,29 @@
                         </div>
                     </div>
                     <ol class="carousel-indicators mr-0 mb-0 mt-4 position-relative">
-                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-2" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-2" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-2" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-2" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-3 active" data-slide-to="0"></li>
+                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-3" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-3" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" class="dot rounded-circle mx-3" data-slide-to="3"></li>
                     </ol>
                 </div>
-                <div class="">
-                    <div class="shape position-relative text-left">
+                    <div class="comment-name position-absolute text-left">
                         <span class="text-small text-dark"> نظر محمد رضا </span>
                     </div>
-                </div>
 
             </div>
         </div>
     </div>
 </section>
+
 <!--forth section-->
 <section id="forth-section">
     <div class="container py-3">
-        <div class="row">
-            <div class="col-6 nobat position-relative my-auto text-right justify-content-center">
+        <div class="row pb-5">
+            <div class="col-6 position-relative download-app my-auto text-right justify-content-center">
                 <div class="py-5">
-                    <h5> دانلود اپلیکیشن درمانکده </h5>
-                    <p class="primary-size"> دریافت نوبت از بیش از 700 متخصص در تهران </p>
+                    <h4> دانلود اپلیکیشن درمانکده </h4>
+                    <p class="text-medium"> دریافت نوبت از بیش از 700 متخصص در تهران </p>
                 </div>
                 <h5> برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید </h5>
                 <form action="" class="form-inline text-right w-100 py-3" method="post">
@@ -353,23 +360,23 @@
             </div>
         </div>
         <div class="text-center mb-3 mt-5">
-            <h5 class="title mx-auto"> به جمع درمانکده ای ها بپیوندید </h5>
+            <h5 class="title mx-auto mt-5"> به جمع درمانکده ای ها بپیوندید </h5>
             <div class="row join-us pt-4">
                 <div class="col-4">
                     <div>
-                        <img class="" src="./assets/home/images/receptionist.png" alt="منشی ها">
+                        <img class="" src="../../assets/home/images/receptionist.png" alt="منشی ها">
                     </div>
                     <a href="" class="btn btn-outline-primary rounded-20 w-50 my-3"> منشی ها </a>
                 </div>
                 <div class="col-4">
                     <div>
-                        <img class="" src="./assets/home/images/doctors.png" alt="پزشکان">
+                        <img class="" src="../../assets/home/images/doctors.png" alt="پزشکان">
                     </div>
                     <a href="" class="btn btn-outline-primary rounded-20 w-50 my-3"> پزشکان </a>
                 </div>
                 <div class="col-4">
                     <div>
-                        <img class="" src="./assets/home/images/undraw_Building_vpxo.png" alt="درمانگاه ها">
+                        <img class="" src="../../assets/home/images/undraw_Building_vpxo.png" alt="درمانگاه ها">
                     </div>
                     <a href="" class="btn btn-outline-primary rounded-20 w-50 my-3"> درمانگاه ها </a>
                 </div>
@@ -387,7 +394,7 @@
                 <div class="col-4"></div>
                 <div class="col-4">
                     <div class="descript text-center">
-                        <a href="#" class="d-block logo-footer"><img class="mx-auto py-3" src="assets/home/images/darmankade_Vector%20with%20heart.png" alt="درمانکده"></a>
+                        <a href="#" class="d-block logo-footer"><img class="mx-auto py-3" src="../../assets/home/images/darmankade_Vector%20with%20heart.png" alt="درمانکده"></a>
                         <p class="descript text-white text-small">سامانه نوبت دهی آنلاین مطب پزشکان و دندان پزشکان که شامل نوبت دهی و دانستنی های سلامت می باشد. شما با ورود به حساب کاربری خدمات بیشتری دریافت خواهید کرد. </p>
                     </div>
                 </div>
@@ -430,15 +437,15 @@
                         <p class="text-justify text-center text-white text-small"> با ثبت‌نام در خبرنامه درمانکده، اولین نفری باشید که از جدیدترین خبرها، جشنواره‌ها و تخفیف های ویژه ما مطلع می‌شوید. </p>
                     </div>
                     <form action="index.html" class="row form-inline w-100" method="get">
-                        <input type="email" required class="w-100 form-control position-absolute rounded-20" placeholder="عضویت در خبرنامه">
+                        <input type="email" required class="w-100 py-4 form-control text-small position-absolute rounded-20" placeholder="آدرس ایمیل شما">
                         <input type="submit" class="position-relative w-25 px-2 btn form-control btn-secondary border-right rounded-left Newsletter-btn" value="ثبت ایمیل">
                     </form>
                     <div class="row py-3 text-center justify-content-center">
                         <div class="bg-white border rounded-20 mx-3 py-2">
-                            <a href="" title="نماد اعتماد الکترونیکی"><img class="reliability" src="assets/home/images/logo.aspx@2x.png" alt="نماد اعتماد الکترونیکی"></a>
+                            <a href="" title="نماد اعتماد الکترونیکی"><img class="reliability" src="../../assets/home/images/logo.aspx@2x.png" alt="نماد اعتماد الکترونیکی"></a>
                         </div>
                         <div class="bg-white border rounded-20 mx-3 py-2">
-                            <a href="" title="نشان ملی ثبت نشانه های دیجیتال"><img class="reliability" src="assets/home/images/logo2.aspx.png" alt="نشان ملی ثبت نشانه های دیجیتال"></a>
+                            <a href="" title="نشان ملی ثبت نشانه های دیجیتال"><img class="reliability" src="../../assets/home/images/logo2.aspx.png" alt="نشان ملی ثبت نشانه های دیجیتال"></a>
                         </div>
                     </div>
                 </div>
@@ -458,12 +465,11 @@
 <script src="../../assets/js/jquery-3.4.1.min.js"></script>
 <script src="../../assets/js/popper.min.js"></script>
 <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
-<script src="../../src/feather.min.js"></script>
+<script src="../../assets/js/feather.min.js"></script>
 <script src="../../assets/js/vue.min.js"></script>
-<script src="../../dist/build.js"></script>
-<script src="../../src/main-index.js"></script>
+<!--<script src="../../dist/build.js"></script>-->
+<script src="../../assets/js/main-desktop.js"></script>
 <script>
-
 </script>
 </body>
 </html>

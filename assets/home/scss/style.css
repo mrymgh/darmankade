@@ -1,52 +1,379 @@
-/*
-Error: File to import not found or unreadable: ./variables.
-       Load path: C:/Users/Babak/Desktop/cmder/vue-cli/assets/home/scss
-        on line 1 of C:\Users\Babak\Desktop\cmder\vue-cli\assets\home\scss\style.scss
+@font-face {
+  font-family: iransans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/irsans.eot");
+  src: url("../../fonts/irsans.eot?#iefix") format("embedded-opentype"), url("../../fonts/irsans.woff2") format("woff2"), url("../../fonts/irsans.woff") format("woff"), url("../fonts/irsans.ttf") format("truetype"); }
+a, span, p, li, ul, div, label, select, option, h1, h2, h3, h4, h5 {
+  font-family: iransans; }
 
-1: @import "./variables";
-2: @import "./fonts";
-3: 
-4: a,span,p,li,ul,div,label,select,option,h1,h2,h3,h4,h5{
-5:   font-family: iransans;
-6: }
+body {
+  background: #f8f7ef;
+  scroll-behavior: smooth; }
 
-Backtrace:
-C:\Users\Babak\Desktop\cmder\vue-cli\assets\home\scss\style.scss:1
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:45:in `import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:28:in `imported_file'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:37:in `css_import?'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:22:in `load'
-C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: ./variables.\A        Load path: C:/Users/Babak/Desktop/cmder/vue-cli/assets/home/scss\A         on line 1 of C:\Users\Babak\Desktop\cmder\vue-cli\assets\home\scss\style.scss\A \A 1: @import \"./variables\";\A 2: @import \"./fonts\";\A 3: \A 4: a,span,p,li,ul,div,label,select,option,h1,h2,h3,h4,h5{\A 5:   font-family: iransans;\A 6: }"; }
+.text-gray-200 {
+  color: #757575; }
+
+.text-black {
+  color: #00234b; }
+
+.text-medium {
+  color: #f9527a; }
+
+.primary-size {
+  font-size: 14px; }
+
+.text-small {
+  font-size: 12px; }
+
+.shadow {
+  box-shadow: 2px 1px rgba(0, 0, 0, 0.16); }
+
+.bg-dark {
+  background-color: #00234b !important; }
+
+.text-dark {
+  color: #00234b !important; }
+
+.rounded-right-0 {
+  border-top-right-radius: 0px; }
+
+.rounded-left-0 {
+  border-top-left-radius: 0px; }
+
+.rounded-10 {
+  border-radius: 10px; }
+
+.w-80 {
+  width: 80%; }
+
+.border-blue {
+  border-color: #2fc2df !important; }
+
+a {
+  color: #757575;
+  text-decoration: none !important; }
+  a :hover {
+    text-decoration: none !important; }
+
+.menu {
+  min-height: 95px; }
+
+.nav-menu a {
+  font-size: 14px; }
+
+.rounded-20 {
+  border-radius: 20px; }
+
+.logo {
+  width: 138px;
+  height: 60px; }
+
+.register {
+  left: 0 !important; }
+
+.search {
+  min-height: 340px; }
+  .search h2 {
+    font-size: 32px;
+    top: 33%; }
+  .search .search-input {
+    top: 40%;
+    width: 58%;
+    height: 50px;
+    z-index: 150; }
+    .search .search-input .inner {
+      overflow-y: auto;
+      min-height: 5rem;
+      max-height: 7rem; }
+    .search .search-input .search-btn {
+      width: 170px; }
+
+input.form-control.primary-size.h-100.rounded.position-absolute.w-100.d-inline-block.border-left-0.text-small.text-gray-200 {
+  z-index: 10;
+  height: 100%; }
+
+.input-group-append {
+  left: 0%;
+  z-index: 120; }
+  .input-group-append .caret svg {
+    width: 16px; }
+
+.search-icon {
+  right: 2%;
+  z-index: 120; }
+
+#first-section {
+  background: url("../images/Path 4083.svg") left top no-repeat, url("../images/Path 4085.svg") right bottom no-repeat;
+  background-size: 26% 125%; }
+
+#third-section {
+  background: url("../images/Subtraction 1.svg") left no-repeat;
+  background-size: 22% 76%; }
+
+#forth-section {
+  background: url("../images/Path 4088.svg") right top no-repeat;
+  background-size: 22% 76%; }
+
+.popular-search {
+  bottom: 5%;
+  left: 0%; }
+
+.most-popular .circle {
+  border-radius: 50%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  width: 110px;
+  height: 110px;
+  z-index: 50; }
+  .most-popular .circle img {
+    width: 100px;
+    height: 100px;
+    padding: 15px; }
+.most-popular .line-shape {
+  background-color: #757575;
+  height: 20px;
+  width: 2px; }
+.most-popular .popular-title {
+  -webkit-transition: bottom .5s;
+  /* Safari prior 6.1 */
+  transition: bottom .5s; }
+.most-popular :hover .circle {
+  transform: scale(1.3); }
+.most-popular :hover .popular-title {
+  font-weight: bold !important;
+  color: #00234b;
+  position: relative;
+  transform: translateY(-20px); }
+
+.best-service {
+  min-height: 240px;
+  width: 100%;
+  background: url("../images/Hospital.png");
+  background-size: cover; }
+  .best-service .description {
+    width: 100%;
+    display: none; }
+    .best-service .description a {
+      bottom: 0px; }
+  .best-service :hover .description {
+    display: block; }
+
+.slide {
+  height: 100% !important; }
+
+ol.carousel-indicators {
+  bottom: -20% !important; }
+  ol.carousel-indicators .dot {
+    width: 25px;
+    height: 25px;
+    background-color: #2fc2df; }
+    ol.carousel-indicators .dot .active {
+      background-color: #0c444f; }
+
+.carousel-inner {
+  height: 100%; }
+  .carousel-inner div.carousel-item div {
+    padding-top: 20px !important; }
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.show-animate {
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+
+.comments {
+  min-height: 450px; }
+
+.shape {
+  width: 100%;
+  bottom: 21px; }
+  .shape :before {
+    content: '';
+    position: absolute;
+    bottom: 70px;
+    left: 20%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #2fc2df;
+    border-bottom: 0;
+    margin-left: 0px;
+    margin-bottom: -20px; }
+  .shape span {
+    position: relative;
+    left: 20%; }
+
+.nobat {
+  right: 10%; }
+
+.mobile1 {
+  background: url("../images/299.png") no-repeat;
+  background-size: contain;
+  height: 250px;
+  top: 5%;
+  left: -20%; }
+
+.mobile2 {
+  background: url("../images/315.png") no-repeat;
+  background-size: contain;
+  height: 250px;
+  left: 17%; }
+
+.join-us div div img {
+  width: 75%;
+  height: auto; }
+
+.bg-blue {
+  background-color: #2fc2df; }
+
+.text-blue-light {
+  color: #2fc2df; }
+
+.logo-footer img {
+  width: 190px; }
+
+.social a svg {
+  width: 40px;
+  height: 40px; }
+
+.line {
+  min-height: 4rem; }
+
+.Newsletter-btn {
+  left: -83%; }
+
+.reliability {
+  width: 110px;
+  height: auto; }
+
+.copy-write {
+  min-height: 20px; }
+
+section {
+  height: 100vh !important;
+  width: 100% !important;
+  display: inline-block; }
+
+.popular-search-mobile {
+  bottom: 0%; }
+
+.owl-item {
+  margin: 0px 15px; }
+
+.mobile-pic {
+  width: 50%;
+  height: 160px;
+  background: url("../images/315.png") no-repeat;
+  background-size: contain; }
+
+.bg-blue-light {
+  background: #eefafc; }
+
+.icon-animation {
+  height: 70px; }
+
+@media (min-width: 10px) and (max-width: 575.98px) {
+  .primary-size {
+    font-size: 10px; }
+
+  .logo {
+    max-height: 40px; }
+
+  h5 {
+    font-size: 15px; }
+
+  #first-section {
+    background: url("../images/Path 4085.svg") right bottom no-repeat, url("../images/Path 4083.svg") left top no-repeat;
+    background-size: 40% 125%; }
+
+  .search-input input {
+    height: 100%; }
+
+  .input-group-append.position-relative.mr-auto {
+    height: 100%; }
+
+  .circle {
+    width: 50px !important;
+    height: 50px !important; }
+
+  .popular-search-mobile {
+    bottom: 0% !important;
+    z-index: 5; }
+
+  .scroll-down {
+    font-size: 30px;
+    font-weight: bold; }
+
+  .consultation, .visit {
+    height: 220px;
+    width: 100%;
+    background: url("../images/doctors.png") center no-repeat; }
+    .consultation a.rounded-box-link, .visit a.rounded-box-link {
+      top: 5%;
+      right: 5%; }
+
+  .visit {
+    background: url("../image-mobile/Symptom2.png") center no-repeat; }
+
+  owl-carousel {
+    max-height: 250px !important; }
+
+  .owl-stage-outer {
+    height: 200px; }
+
+  .reliability {
+    width: 91px; }
+
+  .chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite; }
+
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite; }
+
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite; }
+
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 35%;
+    background: #2fc2df; }
+
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg); }
+
+  .chevron:after {
+    right: 8px;
+    width: 35%;
+    transform: skew(0deg, -30deg); }
+
+  @keyframes move {
+    25% {
+      opacity: 1; }
+    33% {
+      opacity: 1;
+      transform: translateY(30px); }
+    67% {
+      opacity: 1;
+      transform: translateY(40px); }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5); } }
+  @keyframes pulse {
+    to {
+      opacity: 1; } } }
+
+/*# sourceMappingURL=style.css.map */

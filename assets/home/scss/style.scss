@@ -17,11 +17,9 @@ body{
   color: $black-color;
 }
 .text-medium{
-  color: $primary-color;
+  font-size: $medium-size;
 }
-.primary-size{
-  font-size: $primary-size;
-}
+
 .text-small{
   font-size: $small-size;
 }
@@ -58,11 +56,14 @@ a{
     text-decoration: none!important;
   }
 }
+p{
+  font-size: $medium-size;
+}
 .menu{
   min-height: 95px;
 }
 .nav-menu a{
-  font-size: $primary-size;
+  font-size: $medium-size;
 }
 .rounded-20{
   border-radius: 20px;
@@ -97,17 +98,18 @@ a{
 }
 input.form-control.primary-size.h-100.rounded.position-absolute.w-100.d-inline-block.border-left-0.text-small.text-gray-200 {
   z-index: 10;
+  height: 100%;
 }
 .input-group-append{
   left: 0%;
-  z-index: 120;
+  z-index: 10;
   .caret svg{
     width: 16px;
   }
 }
 .search-icon{
   right: 2%;
-  z-index: 120;
+  z-index: 10;
 }
 #first-section{
   background: url('../images/Path 4083.svg') left top no-repeat, url('../images/Path 4085.svg') right bottom no-repeat;
@@ -123,18 +125,36 @@ input.form-control.primary-size.h-100.rounded.position-absolute.w-100.d-inline-b
 }
 .popular-search{
   bottom: 5%;
+  left: 0%;
 }
 .most-popular{
   .circle{
     border-radius: 50%;
-    height: auto;
     -webkit-transition: all .5s;
     transition: all .5s;
+    width:100px;
+    height:100px;
+    z-index: 50;
     img{
-      width: 100%;
-      height: 100%;
-      padding: 15%;
+      width: 90px;
+      height: 90px;
+      padding: 10px;
     }
+  }
+  .line-shape{
+    z-index: -5;
+    position: absolute;
+    top: 90%;
+    width: 1px;
+    height: 50px;
+    border: .5px solid lighten($gray-200,20%);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .popular-title{
+    -webkit-transition: all .5s;
+    /* Safari prior 6.1 */
+    transition: all .5s;
   }
   :hover{
     .circle{
@@ -145,36 +165,52 @@ input.form-control.primary-size.h-100.rounded.position-absolute.w-100.d-inline-b
       font-weight: bold !important;
       color: $black-color;
       position: relative;
-      -webkit-transition: all .5s;
-      /* Safari prior 6.1 */
-      transition: all .5s;
+      transform: translateY(-20px);
+    }
+    .line-shape{
+      border: 1px solid $gray-200;
     }
   }
 }
 
 .best-service{
   .description{
-    //z-index: 120;
-    //position: relative;
+    z-index: 20;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
     width: 100%;
-    display: none;
     a{
-      bottom: 0px;
+      bottom: -15px;
     }
+  }
+  &:hover{
+      height: 50px !important;
+      .description {
+        visibility: visible;
+        opacity: 1;
+      }
   }
   min-height: 240px;
   width: 100%;
   background: url("../images/Hospital.png");
   background-size: cover;
-  :hover{
-    .description{
-      display: block;
-    }
-  }
 }
-
 //Slider
-.box-comments div div{
+.bold-comment{
+  h4{
+    position: relative;
+    top: 0px;
+  }
+  p{
+    position: relative;
+    top: 10%;
+  }
+  a{
+    position: absolute;
+    bottom: 35%;
+    left: 27%;
+  }
 }
 .slide{
   height: 100% !important;
@@ -183,12 +219,12 @@ input.form-control.primary-size.h-100.rounded.position-absolute.w-100.d-inline-b
 ol.carousel-indicators{
   bottom: -20% !important;
   .dot{
-    width: 25px;
-    height: 25px;
-    background-color: $blue-color;
-    .active{
-      background-color: darken($blue-color,35%) ;
-    }
+    width: 15px;
+    height: 15px;
+    background-color: $gray-200;
+  }
+  .active{
+    background-color: darken($blue-color,5%) !important;
   }
 }
 .carousel-inner{
@@ -204,48 +240,35 @@ ol.carousel-indicators{
     height: auto;
   }
 }
-.show-animate{
-  -webkit-transition: all .5s;
-  transition: all .5s;
+.more-comment a{
+  left: 0px;
 }
 .comments{
   min-height: 450px;
 }
-.shape{
-  width: 100%;
-  bottom: 21px;
-  :before{
-    content: '';
-    position: absolute;
-    bottom:70px;
-    left: 20%;
-    width: 0;
-    height: 0;
-    border: 20px solid transparent;
-    border-top-color: $blue-color;
-    border-bottom: 0;
-    margin-left: 0px;
-    margin-bottom: -20px;
-  }
-  span{
-    position: relative;
-    left:20% ;
-  }
+.message-box{
+  background: url("../images/Union 3.svg") bottom no-repeat;
+  background-size: cover;
 }
-.nobat{
-  right: 10%;
+.comment-name{
+  font-weight: bold;
+bottom: 10%;
+  left: 13%;
+}
+.download-app{
+  right: 7%;
 }
 .mobile1{
   background: url("../images/299.png") no-repeat;
   background-size: contain;
-  height:250px;
+  height:300px;
   top: 5%;
   left: -20%;
  }
 .mobile2{
   background: url("../images/315.png") no-repeat;
   background-size: contain;
-  height: 250px;
+  height: 300px;
   left: 17%;
 }
 .join-us div div{
@@ -263,7 +286,7 @@ ol.carousel-indicators{
   color: $blue-color;
 }
 .logo-footer img{
-  width: 190px;
+  width: 180px;
 }
 .social a svg{
   width: 40px;
@@ -283,7 +306,7 @@ ol.carousel-indicators{
 .copy-write{
   min-height: 20px;
 }
-section{
+section#first-section , section#footer-section{
   height: 100vh !important;
   width: 100% !important;
   display: inline-block;
@@ -310,9 +333,9 @@ section{
   height: 70px;
 }
 @media (min-width: 10px) and (max-width: 575.98px) {
-  $primary-size: 10px;
+  $primary-size: 12px;
   .primary-size{
-    font-size: $primary-size;;
+    font-size: $medium-size;
   }
  .logo{
    max-height:40px;
@@ -321,20 +344,37 @@ section{
     font-size: 15px;
   }
   #first-section{
-
     background: url('../images/Path 4085.svg') right bottom no-repeat, url('../images/Path 4083.svg') left top no-repeat;
     background-size: 40% 125%;
   }
   .search-input input{
-    height: 40px;
+    height: 100%;
   }
   .input-group-append.position-relative.mr-auto {
-    height: 40px;
+    height: 100%;
+  }
+  .most-popular :hover{
+    transform: none !important;
   }
   .circle{
-    width: 50px !important;
-    height: 50px !important;
+    width: 60px !important;
+    height: 60px !important;
+    padding: 0px !important;
+    img{
+      width: 55px !important;
+      height: 55px !important;
+    }
   }
+  #mobile-menu{
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: width 0.5s !important;
+}
   .popular-search-mobile{
     bottom: 0% !important;
     z-index: 5;
@@ -350,6 +390,26 @@ section{
     a.rounded-box-link{
       top: 5%;
       right: 5%;
+    }
+  }
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s linear;
+  }
+
+  .overlay .closebtn {
+    top: 20px;
+    left: 25%;
+    font-size: 60px;
+    svg{
+      position:absolute;
+      left: 10%;
     }
   }
   .visit{
@@ -424,6 +484,7 @@ section{
     }
   }
 }
+
 
 @media (min-width: 576px) and (max-width: 767.98px){
 

@@ -16,15 +16,32 @@
 <section id="first-section">
     <div class="container-fluid px-0 h-100 d-block">
         <div class="row mx-0 bg-white shadow-sm">
-            <div class="container w-100 mx-auto d-flex align-items-center justify-content-between py-3">
-                <div class="position-relative ml-0 mobile-menu">
-
+            <div class="container w-100 mx-auto d-flex align-items-center justify-content-between py-3" id="app1">
+<!--                <div class="position-relative ml-0">-->
+<!--                    <a href="javascript:void(0)" onclick="openNav()" title="منو"> <i data-feather="align-justify"></i> </a>-->
+<!--                </div>-->
+<!--                <div class="bg-white border border-right" id="mobile-menu">-->
+<!--                    <ul class="list-unstyled w-100 p-3">-->
+<!--                        <div id="mySidenav" class="sidenav">-->
+<!--                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+<!--                        </div>-->
+<!--                        <a href="#"><li class="p-3" v-for="menu in menus"> {{menu}} </li></a>-->
+<!--                    </ul>-->
+<!--                </div>-->
+                <div class="position-relative ml-0">
+                    <a href="javascript:void(0)" onclick="openNav()" title="منو"> <i data-feather="align-justify"></i> </a>
+                </div>
+                <div id="myNav" class="overlay position-absolute bg-white">
+                    <a href="javascript:void(0)" class="closebtn py-3 w-100 d-block" onclick="closeNav()"><i class="float-left" data-feather="x"></i></a>
+                    <ul class="list-unstyled">
+                        <a href="#" v-for="menu in menus"><li class="p-3 text-medium"> {{menu}} </li></a>
+                    </ul>
                 </div>
                 <div class="logo text-center position-relative">
-                    <a href="#" class="" title="درمانکده"><img class="h-100" src="assets/home/images/darmankade.png" alt="درمانکده"></a>
+                    <a href="#" class="" title="درمانکده"><img class="h-100" src="../../assets/home/images/darmankade.png" alt="درمانکده"></a>
                 </div>
                 <div class="position-relative mr-0 search-icon">
-
+                    <a href="" title="سرچ کنید"> <i data-feather="search"></i> </a>
                 </div>
             </div>
         </div>
@@ -36,7 +53,7 @@
                 </div>
 
                 <div class="input-group search-input mx-auto">
-                    <input type="text" class="form-control primary-size h-100 rounded position-absolute w-100 d-inline-block border-left-0 text-small text-gray-200" title=" نام پزشک، تخصص یا بیماری" placeholder=" نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                    <input type="text" class="form-control text-medium h-100 rounded position-absolute w-100 d-inline-block border-left-0 text-small text-gray-200" title=" نام پزشک، تخصص یا بیماری" placeholder=" نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
                     <div class="input-group-append  position-relative mr-auto">
                         <!--            <div class="dropdown h-100 bg-white border-top border-bottom">-->
                         <!--              <button class="btn px-0 h-100 dropdown-toggle primary-size border-right" type="button" data-toggle="dropdown">-->
@@ -51,7 +68,7 @@
                         <!--              </ul>-->
 
                         <!--            </div>-->
-                        <button type="submit" class="btn px-3 primary-size btn-primary text-white search-btn rounded-left primary-size"> <i data-feather="search"></i> </button>
+                        <button type="submit" class="btn px-3 text-medium btn-primary text-white search-btn rounded-left"> <i data-feather="search"></i> </button>
                     </div>
                 </div>
             </div>
@@ -59,78 +76,78 @@
 
         <div class="container position-absolute popular-search-mobile">
             <div class="row">
-                <div class="position-relative text-center popular-search d-flex justify-content-between w-100">
-                    <div class="row mx-0 px-4 w-100 text-center justify-content-between">
-                        <div class="col-md-4 py-1 col-12 d-inline-block text-center">
-                            <div class="row w-75 mx-auto">
-                                <div class="col-4 px-2 text-center most-popular text-center d-inline-block">
+                <div class="position-relative popular-search d-flex justify-content-between w-100">
+                    <div class="px-5 w-100">
+                        <div class="col-md-4 py-1 px-3 col-12 d-inline-block">
+                            <div class="row mx-0 justify-content-center w-100">
+                                <div class="col-4 px-1 text-center most-popular d-inline-block">
                                     <a class="text-gray-200" title="کلیه" href="#">
                                         <div class="circle shadow bg-white border">
-                                            <img src="assets/home/images/012-bone.png" alt="کلیه">
+                                            <img src="../../assets/home/images/012-bone.png" alt="کلیه">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-4 px-2 most-popular text-center d-inline-block">
+                                <div class="col-4 px-1 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="مغز واعصاب" href="#">
                                         <div class="circle shadow bg-white border">
-                                            <img src="assets/home/images/018-fetus.png" alt="مغز واعصاب">
+                                            <img src="../../assets/home/images/018-fetus.png" alt="مغز واعصاب">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-4 px-2 most-popular text-center d-inline-block">
+                                <div class="col-4 px-1 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="قلب" href="#">
                                         <div class="circle shadow bg-white border">
-                                            <img src="assets/home/images/057-lungs.png" alt="قلب">
+                                            <img src="../../assets/home/images/057-lungs.png" alt="قلب">
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 py-1 col-12 d-inline-block">
-                            <div class="row w-75 mx-auto">
-                                <div class="col-4 px-2 most-popular text-center d-inline-block">
+                        <div class="col-md-4 py-1 px-3 col-12 d-inline-block text-center">
+                            <div class="row mx-0 justify-content-center w-100">
+                                <div class="col-4 px-1 text-center most-popular d-inline-block">
                                     <a class="text-gray-200" title="کلیه" href="#">
                                         <div class="circle shadow bg-white border">
-                                            <img src="assets/home/images/012-bone.png" alt="کلیه">
+                                            <img src="../../assets/home/images/012-bone.png" alt="کلیه">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-4 px-2 most-popular text-center d-inline-block">
+                                <div class="col-4 px-1 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="مغز واعصاب" href="#">
                                         <div class="circle shadow bg-white border">
-                                            <img src="assets/home/images/018-fetus.png" alt="مغز واعصاب">
+                                            <img src="../../assets/home/images/018-fetus.png" alt="مغز واعصاب">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-4 px-2 most-popular text-center d-inline-block">
+                                <div class="col-4 px-1 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="قلب" href="#">
                                         <div class="circle shadow bg-white border">
-                                            <img src="assets/home/images/057-lungs.png" alt="قلب">
+                                            <img src="../../assets/home/images/057-lungs.png" alt="قلب">
                                         </div>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-12 py-1 d-inline-block">
-                            <div class="row w-75 mx-auto">
-                                <div class="col-4 px-2 most-popular text-center d-inline-block">
+                        <div class="col-md-4 py-1 px-3 col-12 d-inline-block text-center">
+                            <div class="row mx-0 justify-content-center w-100">
+                                <div class="col-4 px-1 text-center most-popular d-inline-block">
                                     <a class="text-gray-200" title="کلیه" href="#">
                                         <div class="circle shadow bg-white border">
-                                            <img src="assets/home/images/012-bone.png" alt="کلیه">
+                                            <img src="../../assets/home/images/012-bone.png" alt="کلیه">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-4 px-2 most-popular text-center d-inline-block">
+                                <div class="col-4 px-1 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="مغز واعصاب" href="#">
                                         <div class="circle shadow bg-white border">
-                                            <img src="assets/home/images/018-fetus.png" alt="مغز واعصاب">
+                                            <img src="../../assets/home/images/018-fetus.png" alt="مغز واعصاب">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-4 px-2 most-popular text-center d-inline-block">
+                                <div class="col-4 px-1 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="قلب" href="#">
                                         <div class="circle shadow bg-white border">
-                                            <img src="assets/home/images/057-lungs.png" alt="قلب">
+                                            <img src="../../assets/home/images/057-lungs.png" alt="قلب">
                                         </div>
                                     </a>
                                 </div>
@@ -162,50 +179,50 @@
     <div class="container px-0 pr-3 w-100">
         <div class="d-block pl-3">
             <div class="border border-blue consultation w-100 rounded-20">
-                <a class="btn btn-primary position-relative rounded-box-link primary-size rounded-20 px-3" href="#" title="آنلاین مشاوره بگیر">  آنلاین مشاوره بگیر <i data-feather="chevron-left" class=""></i></a>
+                <a class="btn btn-primary position-relative rounded-box-link rounded-20 px-3" href="#" title="آنلاین مشاوره بگیر">  آنلاین مشاوره بگیر <i data-feather="chevron-left" class=""></i></a>
             </div>
         </div>
 
-        <div class="container px-0 most-views-hospital py-4">
+        <div class="container px-0 most-views-hospital pt-4">
             <div class="row mx-0 align-items-center justify-content-between">
                 <h5 class="text-right mb-0 align-items-center"> <i data-feather="square" class="bg-dark border-0 text-dark"></i> پربازدید ترین بیمارستان ها </h5>
-                <a href="#" class="float-left my-auto primary-size text-blue-light">  بیشتر <i data-feather="chevron-left"></i></a>
+                <a href="#" class="float-left my-auto text-blue-light">  بیشتر <i data-feather="chevron-left"></i></a>
             </div>
-            <div class="my-5 px-0 w-100" dir="ltr">
+            <div class="mt-5 px-0 w-100" dir="ltr">
                 <div class="owl-carousel text-center slider_box d-block">
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان فارابی </span>
                         </a>
                     </div>
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان البرز </span>
                         </a>
                     </div>
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان احد </span>
                         </a>
                     </div>
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان عنایت </span>
                         </a>
                     </div>
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان تقی </span>
                         </a>
                     </div>
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان فارابی </span>
                         </a>
                     </div>
@@ -222,50 +239,50 @@
     <div class="container w-100 py-3">
         <div class="d-block">
             <div class="border border-blue visit w-100 rounded-20">
-                <a class="btn btn-primary position-relative rounded-box-link primary-size rounded-20 px-3" href="#" title="رایگان ویزیت شو">  رایگان ویزیت شو <i data-feather="chevron-left" class=""></i></a>
+                <a class="btn btn-primary position-relative rounded-box-link rounded-20 px-3" href="#" title="رایگان ویزیت شو">  رایگان ویزیت شو <i data-feather="chevron-left" class=""></i></a>
             </div>
         </div>
 
-        <div class="container px-0 most-views-hospital py-4">
+        <div class="container px-0 most-views-hospital pt-4">
             <div class="row mx-0 align-items-center justify-content-between">
                 <h5 class="text-right mb-0 align-items-center"> <i data-feather="square" class="bg-dark border-0 text-dark"></i> پربازدیدترین دارو ها </h5>
-                <a href="#" class="float-left my-auto primary-size text-blue-light">  بیشتر <i data-feather="chevron-left"></i></a>
+                <a href="#" class="float-left my-auto text-medium text-blue-light">  بیشتر <i data-feather="chevron-left"></i></a>
             </div>
-            <div class="my-5 px-0 w-100" dir="ltr">
+            <div class="mt-5 px-0 w-100" dir="ltr">
                 <div class="owl-carousel text-center slider_box d-block">
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان فارابی </span>
                         </a>
                     </div>
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان البرز </span>
                         </a>
                     </div>
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان احد </span>
                         </a>
                     </div>
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان عنایت </span>
                         </a>
                     </div>
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_0200.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان تقی </span>
                         </a>
                     </div>
                     <div class="bg-white text-center rounded-10 p-3 h-100 w-100" >
                         <a href="#" title="اسلایدر">
-                            <img src="./assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
+                            <img src="../../assets/home/image-mobile/DSC_1359.png" class="rounded-circle p-2" alt="اسلایدر">
                             <span class="text-gray-200 my-4 text-blue-light text-small"> بیمارستان فارابی </span>
                         </a>
                     </div>
@@ -279,7 +296,7 @@
 <div class="container">
     <div class="col-12 px-0">
         <div class="row rounded-20 p-3 pb-0 border border-blue bg-blue-light">
-            <div class="col-6 primary-size download-app">
+            <div class="col-6 text-medium download-app">
                 <h5> دانلود اپلیکیشن درمانکده </h5>
                 <ul class="list-unstyled mr-0 h-25">
                     <li>کارآیی بهتر درآپ</li>
@@ -296,9 +313,9 @@
         </div>
         <div class="accordion">
             <div class="panel-group my-4" id="accordion">
-                <div class="panel panel-default bg-white my-2 py-2 primary-size">
+                <div class="panel panel-default bg-white my-2 py-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title">
+                        <h4 class="panel-title pr-3 text-medium">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                 <!--                <i class="feather-plus" data-feather="plus"></i>-->
                                 <!--                <i class="feather-minus" data-feather="minus"></i>-->
@@ -312,9 +329,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default bg-white my-2 py-2 primary-size">
+                <div class="panel panel-default bg-white my-2 py-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title">
+                        <h4 class="panel-title pr-3 text-medium">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                                 <span class="glyphicon glyphicon-plus"></span>
                                 برای بیماران
@@ -327,9 +344,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default bg-white my-2 py-2 primary-size">
+                <div class="panel panel-default bg-white my-2 py-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title">
+                        <h4 class="panel-title pr-3 text-medium">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                                 <span class="glyphicon glyphicon-plus"></span>
                                 برای پزشکان
@@ -342,9 +359,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default bg-white my-2 py-2 primary-size">
+                <div class="panel panel-default bg-white my-2 py-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title">
+                        <h4 class="panel-title pr-3 text-medium">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
                                 <span class="glyphicon glyphicon-plus"></span>
                                 برای کلینیک ها
@@ -357,9 +374,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default bg-white my-2 py-2 primary-size">
+                <div class="panel panel-default bg-white my-2 py-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title">
+                        <h4 class="panel-title pr-3 text-medium">
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
                                 <span class="glyphicon glyphicon-plus"></span>
                                 برای منشی ها
@@ -384,17 +401,17 @@
     <div class="container-fluid bg-blue">
         <div class="container row mx-0 py-3">
             <div class="col-12 text-center logo-footer">
-                <a href="" title="درمانکده"><img src="./assets/home/images/darmankade_Vector%20with%20heart.png" alt="درمانکده"></a>
+                <a href="" title="درمانکده"><img src="../../assets/home/images/darmankade_Vector%20with%20heart.png" alt="درمانکده"></a>
             </div>
             <div class="col-12 text-white text-center text-small pt-3 description-footer">
                 <p> درمانکده، درمانگاه یا مطب خاصی نیست و یک سایت نوبت دهی برای مطب پزشکان است. </p>
             </div>
             <div class="col-12 row py-3 px-0 mx-auto text-center justify-content-center">
                 <div class="bg-white border rounded-20 mx-3 py-2">
-                    <a href="" title="نماد اعتماد الکترونیکی"><img class="reliability" src="assets/home/images/logo.aspx@2x.png" alt="نماد اعتماد الکترونیکی"></a>
+                    <a href="" title="نماد اعتماد الکترونیکی"><img class="reliability" src="../../assets/home/images/logo.aspx@2x.png" alt="نماد اعتماد الکترونیکی"></a>
                 </div>
                 <div class="bg-white border rounded-20 mx-3 py-2">
-                    <a href="" title="نشان ملی ثبت نشانه های دیجیتال"><img class="reliability" src="assets/home/images/logo2.aspx.png" alt="نشان ملی ثبت نشانه های دیجیتال"></a>
+                    <a href="" title="نشان ملی ثبت نشانه های دیجیتال"><img class="reliability" src="../../assets/home/images/logo2.aspx.png" alt="نشان ملی ثبت نشانه های دیجیتال"></a>
                 </div>
             </div>
             <div class="col-12">
@@ -412,7 +429,7 @@
 </footer>
 <div class="copy-write bg-dark">
     <div class="container row py-1 mx-0 h-100 text-white">
-        <p class="primary-size d-flex align-items-center mx-auto mb-0">تمامی حقوق این سایت برای درمانکده محفوظ است </p>
+        <p class="text-medium d-flex  align-items-center mx-auto mb-0">تمامی حقوق این سایت برای درمانکده محفوظ است </p>
         <p class="float-left primary-size mb-0 mr-auto d-none"> طراحی شده با <i data-feather="heart" class="text-danger"></i> توسط تیم درمانکده </p>
     </div>
 </div>
@@ -422,8 +439,8 @@
 <script src="../../assets/js/popper.min.js"></script>
 <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
 <script src="../../assets/js/owl.carousel.min.js"></script>
-<script src="./src/feather.min.js"></script>
-<script src="assets/js/vue.min.js"></script>
-<script src="./dist/build.js"></script>
+<script src="../../assets/js/feather.min.js"></script>
+<script src="../../assets/js/vue.min.js"></script>
+<script src="../../assets/js/main-mobile.js"></script>
 </body>
 </html>
