@@ -32,18 +32,44 @@ new Vue ({
   el: '#header-menu',
   data:function () {
     return {
-      menus:[ 'جستجو پزشکان','بیمارستان ها' , 'داروها' , 'تست سلامت', 'گروه های خونی', 'مجله سلامت درمانکده']
+      menus:[ 'جستجو پزشکان','بیمارستان ها' , 'داروها' , 'تست سلامت', 'گروه های خونی']
     }
   }
 });
 
 new Vue ({
-  el: '#cities-list',
-  data: function () {
-    return {
-      cities : ['تهران','مشهد','قم','اراک','اصفهان','تبریز']
+  el: '.search',
+  data (){
+    return{
+      lists : [
+        {name:"عباس نبوی", job:"پزشک", city:"اقدسیه"},
+        {name:"حسین عسگری", job:"پیراپزشک", city:"انقلاب - فلسطین"},
+        {name:"علی عسگری", job:"پزشک", city:"انقلاب - فلسطین"},
+        {name:"ممد عسگری", job:"دندان پزشک", city:"ری- تهرانپارس"},
+        {name:"گیسو عسگری", job:"پیراپزشک", city:"جردن"},
+        {name:"ژاله عسگری", job:"پیراپزشک", city:"افسریه"}
+      ]
     }
   }
 })
 // Vue.component('vue-feather', VueFeather);
 
+function showDiv() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByClassName("searchFilter");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}

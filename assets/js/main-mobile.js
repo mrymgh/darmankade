@@ -16,13 +16,20 @@
 // feather.replace()
 // let mobileMenu = document.getElementById('mobile-menu')
 
+
 function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+  document.getElementById("myNav").style.width = "75%";
 }
 
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
+
+$(document).ready(function() {
+  $(".menu-close, .menu-button").on("click", function(){
+    $(".menu").toggleClass("active");
+  });
+});
 
 new Vue ({
   el: '#app1',
@@ -39,18 +46,25 @@ $(document).ready(function(){
 });
 $('.owl-carousel').owlCarousel({
   rtl:true,
-  loop:true,
-  margin:10,
+  loop:false,
+  margin:20,
+  height:'100%',
   nav:false,
   responsive:{
     0:{
       items:2
     },
-    600:{
+    450:{
       items:3
     },
+    500:{
+      items:4
+    },
+    600:{
+      items:4
+    },
     1000:{
-      items:5
+      items:6
     }
   }
 })

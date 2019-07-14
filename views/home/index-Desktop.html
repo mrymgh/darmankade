@@ -21,26 +21,78 @@
                 <div class="logo position-relative float-right my-auto">
                     <a href="#" class="" title="درمانکده"><img class="h-100" src="../../assets/home/images/darmankade.png" alt="درمانکده"></a>
                 </div>
-                <div class="d-inline-block float-right position-relative mx-3 my-auto" id="includedContent">
-                    <nav class="navbar my-auto navbar-expand-lg">
+                <div class="d-inline-block float-right position-relative mx-3" id="includedContent">
+                    <nav class="navbar py-1 my-auto navbar-expand-lg">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav list-inline text-right nav-menu pr-0" id="header-menu">
-                                <a class="nav-item nav-link text-black px-3 border-left" v-for="menu in menus" v-bind:title="menu" href="#"><li> {{menu}} </li></a>
-                            </ul>
-                            <!--                  <a class="nav-item nav-link text-black px-3 border-left" href="#">بیمارستان ها</a>-->
-                            <!--                <a class="nav-item nav-link text-black px-3 border-left" href="#">داروها</a>-->
-                            <!--                <a class="nav-item nav-link text-black px-3 border-left" href="#">تست سلامت</a>-->
-                            <!--                <a class="nav-item nav-link text-black px-3 border-left" href="#">گروه های خونی</a>-->
-                            <!--                <a class="nav-item nav-link text-black px-3" href="#">   مجله سلامت درمانکده<i data-feather="chevron-down" class="mr-3"></i><span class="px-2"> </span></a>-->
+                                <li class="nav-item nav-link text-black px-3 border-left" v-for="menu in menus"  v-bind:title="menu"><a href="#"> {{menu}} </a></li>
+                                <li class="nav-item nav-link text-black px-3 articles">
+                                    <a href=""> مجله سلامت درمانکده <i data-feather="chevron-down" class="mx-2"></i></a>
+                                    <div class="mega-menu position-absolute">
+                                        <ul class="list-unstyled w-100 pr-0 bg-gray-100 py-3 border-top border-bottom shadow-sm list-inline">
+                                            <div class="row mx-0 p-3 w-75 mx-auto">
+                                                <li class="col-md-3">
+                                                    <a href="" title="دلایل خستگی و بیحالی">
+                                                        <article class="card shadow-sm border rounded">
+                                                            <img class="w-100 h-auto rounded-top-20" src="../../assets/home/images/adorable-asleep-baby-2111997.png" alt="دلایل خستگی و بی حالی">
+                                                            <div>
+                                                                <h6 class="card-title p-2 text-small"> دلایل خستگی و بی حالی روزانه و راهکارهای رفع خستگی </h6>
+                                                                <i data-feather="arrow-left" class="position-relative float-left mr-auto ml-3 mb-3"></i>
+                                                            </div>
+                                                        </article>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-3">
+                                                    <a href="" title="دلایل خستگی و بیحالی">
+                                                        <article class="card shadow-sm border rounded">
+                                                            <img class="w-100 h-auto rounded-top-20" src="../../assets/home/images/adorable-asleep-baby-2111997.png" alt="دلایل خستگی و بی حالی">
+                                                            <div>
+                                                                <h6 class="card-title p-2 text-small"> دلایل خستگی و بی حالی روزانه و راهکارهای رفع خستگی </h6>
+                                                                <i data-feather="arrow-left" class="position-relative float-left mr-auto ml-3 mb-3"></i>
+                                                            </div>
+                                                        </article>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-3">
+                                                    <a href="" title="دلایل خستگی و بیحالی">
+                                                        <article class="card shadow-sm border rounded">
+                                                            <img class="w-100 h-auto rounded-top-20" src="../../assets/home/images/adorable-asleep-baby-2111997.png" alt="دلایل خستگی و بی حالی">
+                                                            <div>
+                                                                <h6 class="card-title p-2 text-small"> دلایل خستگی و بی حالی روزانه و راهکارهای رفع خستگی </h6>
+                                                                <i data-feather="arrow-left" class="position-relative float-left mr-auto ml-3 mb-3"></i>
+                                                            </div>
+                                                        </article>
+                                                    </a>
+                                                </li>
+                                                <li class="col-md-3">
+                                                    <a href="" title="دلایل خستگی و بیحالی">
+                                                        <article class="card shadow-sm border rounded">
+                                                            <img class="w-100 h-auto rounded-top-20" src="../../assets/home/images/adorable-asleep-baby-2111997.png" alt="دلایل خستگی و بی حالی">
+                                                            <div>
+                                                                <h6 class="card-title p-2 text-small"> دلایل خستگی و بی حالی روزانه و راهکارهای رفع خستگی </h6>
+                                                                <i data-feather="arrow-left" class="position-relative float-left mr-auto ml-3 mb-3"></i>
+                                                            </div>
+                                                        </article>
+                                                    </a>
+                                                </li>
+                                            </div>
+                                            <div class="row mx-0 text-center">
+                                                <a href="../" title="مشاهده همه مقالات" class="btn btn-primary mx-auto rounded-20"> مشاهده همه مقالات <i data-feather="chevron-left"></i> </a>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </li>
+                        </ul>
                         </div>
                     </nav>
                 </div>
                 <div class="position-relative float-left mr-auto ml-0 register">
                     <button class="btn btn-outline-primary text-medium rounded-20 px-4"><i data-feather="user"></i>  ورود/ ثبت نام </button>
                 </div>
+
             </div>
         </div>
         <div class="container">
@@ -48,13 +100,18 @@
                 <div class="search w-100 text-center">
                     <h2 class=" position-relative search-title d-block">با درمانکده بهترین پزشک رو پیدا کن و آنلاین نوبت بگیر</h2>
                     <div class="input-group search-input mx-auto">
-                        <input type="text" class="form-control rounded position-absolute h-100 w-100 d-inline-block border-left-0 text-small text-gray-200" placeholder=" جستجوی نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                        <input type="text" class="form-control rounded position-absolute h-100 w-100 d-inline-block border-left-0 text-small text-gray-200" id="myInput" onclick="showDiv()" onkeyup="filterFunction()" placeholder=" جستجوی نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                        <div id="myDropdown" class="dropdown-content rounded-20 border border-blue">
+                            <ul class="list-unstyled text-right">
+                                <a href="" v-for="list in lists"><li class="searchFilter w-100" >{{list.name}}</li></a>
+                            </ul>
+                        </div>
                         <div class="input-group-append  position-relative mr-auto">
                             <div class="dropdown h-100 bg-white border-top text-mediumtext-medium border-bottom">
                                 <button class="btn h-100 dropdown-toggle border-right" type="button" data-toggle="dropdown">
                                     <span class="caret ml-5 text-gray-200"><i data-feather="map-pin" class="ml-3"></i> تهران </span></button>
                                 <ul class="dropdown-menu px-3 inner text-right overflow-auto text-medium" id="cities-list">
-                                    <li v-for="city in cities"><a href="#">{{city}}</a></li>
+                                    <li v-for="list in lists"><a href="#">{{list.city}}</a></li>
                                     <!--                    <li v-for=""><a href="#">اصفهان</a></li>-->
                                     <!--                    <li v-for=""><a href="#">مشهد</a></li>-->
                                     <!--                    <li v-for=""><a href="#">اراک</a></li>-->

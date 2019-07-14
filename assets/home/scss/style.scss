@@ -13,6 +13,9 @@ body{
 .text-gray-200{
   color: $gray-200;
 }
+.bg-gray-100{
+  background-color: $gray-100;
+}
 .text-black{
   color: $black-color;
 }
@@ -50,7 +53,7 @@ body{
 
 //Class styles
 a{
-  color: $gray-200;
+  color: #002c3e;
   text-decoration: none!important;
   :hover{
     text-decoration: none!important;
@@ -67,6 +70,10 @@ p{
 }
 .rounded-20{
   border-radius: 20px;
+}
+.rounded-top-20{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .logo{
   width: 138px;
@@ -85,7 +92,7 @@ p{
     top: 40%;
     width: 58%;
     height:50px;
-    z-index: 150;
+    z-index: 50;
     .inner{
       overflow-y: auto;
       min-height: 5rem;
@@ -126,51 +133,6 @@ input.form-control.primary-size.h-100.rounded.position-absolute.w-100.d-inline-b
 .popular-search{
   bottom: 5%;
   left: 0%;
-}
-.most-popular{
-  .circle{
-    border-radius: 50%;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    width:100px;
-    height:100px;
-    z-index: 50;
-    img{
-      width: 90px;
-      height: 90px;
-      padding: 10px;
-    }
-  }
-  .line-shape{
-    z-index: -5;
-    position: absolute;
-    top: 90%;
-    width: 1px;
-    height: 50px;
-    border: .5px solid lighten($gray-200,20%);
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
-  .popular-title{
-    -webkit-transition: all .5s;
-    /* Safari prior 6.1 */
-    transition: all .5s;
-  }
-  :hover{
-    .circle{
-      //box-shadow:  2px 2px $blue-color !important;
-      transform: scale(1.3);
-    }
-    .popular-title{
-      font-weight: bold !important;
-      color: $black-color;
-      position: relative;
-      transform: translateY(-20px);
-    }
-    .line-shape{
-      border: 1px solid $gray-200;
-    }
-  }
 }
 
 .best-service{
@@ -311,14 +273,59 @@ section#first-section , section#footer-section{
   width: 100% !important;
   display: inline-block;
 }
+.mega-menu{
+  width: 100vw;
+  left: -37.4%;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  ul{
+    margin-top: 2.2rem;
+  }
+}
+.articles{
+  a{
+    min-height: 40px !important;
+  }
+  &:hover{
+    .mega-menu{
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  }
+}
+h6.card-title{
+  line-height: 32px;
+}
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  top: 50px;
+  width: 53%;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+  ul a {
+    padding: 10px;
+  }
+}
+.show {display: block;}
+.container{
+  margin: 0px !important;
+}
 //قسمت موبایل
 //media Query
 .popular-search-mobile{
  bottom: 0%;
-}
-.owl-item{
-  margin: 0px 15px;
 }
 .mobile-pic{
   width: 50%;
@@ -332,8 +339,218 @@ section#first-section , section#footer-section{
 .icon-animation{
   height: 70px;
 }
-@media (min-width: 10px) and (max-width: 575.98px) {
-  $primary-size: 12px;
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: left 300ms linear;
+}
+
+.menu.active {
+  left: 100%;
+  transition: all 300ms linear;
+}
+
+.menu-close {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-box li {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-box a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+
+.overlay .closebtn {
+  top: 20px;
+  left: 25%;
+  font-size: 60px;
+  svg{
+    position:absolute;
+    right: 10.2%;
+    top: 5.8%;
+  }
+}
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 35%;
+  background: $blue-color;
+}
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+.chevron:after {
+  right: 8px;
+  width: 35%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+.underline{
+  border-bottom: 1px dashed;
+  padding-bottom: 3px;
+}
+
+//media Query
+@media (min-width: 10px) and (max-width: 395px) {
+  $medium-size : 14px;
+  h5{
+    font-size: 14px;
+  }
+  .text-medium{
+    font-size: $medium-size;
+  }
+  .most-popular{
+    .circle{
+      border-radius: 50%;
+      width:45px;
+      height:45px;
+      z-index: 50;
+      margin: 0px auto;
+      img{
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+      }
+    }
+  }
+  #mobile-menu{
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: width 0.5s !important;
+  }
+  .popular-search-mobile{
+    margin: 0px auto;
+    z-index: 5;
+  }
+  .scroll-down{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .owl-carousel{
+    max-height: 200px !important;
+  }
+  .owl-stage-outer {
+    height: 100%;
+    div.owl-item{
+      height: 100% !important;
+      div{
+        height: 100% !important;
+      }
+    }
+  }
+  .consultation {
+    height: 190px;
+    width: 100%;
+    background: url("../images/doctors.png") center no-repeat;
+    a.rounded-box-link{
+      top: 5%;
+      right: 5%;
+    }
+  }
+  .most-views-hospital div h5 svg{
+    width: 16px;
+    height: 16px;
+  }
+  .visit{
+    height: 190px;
+    width: 100%;
+    background: url("../image-mobile/Symptom2.png") center no-repeat;
+    a.rounded-box-link{
+      top: 5%;
+      right: 5%;
+    }
+  }
+  .reliability{
+    width: 75px;
+    height: auto;
+  }
+  .social a svg{
+    width: 20px;
+    height: 20px;
+  }
+  .logo-footer img{
+    width: 100px;
+  }
+}
+
+
+@media (min-width: 395px) and (max-width: 575.98px) {
+  $medium-size: 12px;
   .primary-size{
     font-size: $medium-size;
   }
@@ -353,16 +570,18 @@ section#first-section , section#footer-section{
   .input-group-append.position-relative.mr-auto {
     height: 100%;
   }
-  .most-popular :hover{
-    transform: none !important;
-  }
-  .circle{
-    width: 60px !important;
-    height: 60px !important;
-    padding: 0px !important;
-    img{
-      width: 55px !important;
-      height: 55px !important;
+  .most-popular{
+    .circle{
+      border-radius: 50%;
+      width:70px;
+      height:70px;
+      z-index: 50;
+      margin: 0px auto;
+      img{
+        width: 65px;
+        height: 65px;
+        padding: 10px;
+      }
     }
   }
   #mobile-menu{
@@ -376,12 +595,8 @@ section#first-section , section#footer-section{
     transition: width 0.5s !important;
 }
   .popular-search-mobile{
-    bottom: 0% !important;
+    margin: 0px auto;
     z-index: 5;
-  }
-  .scroll-down{
-    font-size: 30px;
-    font-weight: bold;
   }
   .consultation {
     height: 220px;
@@ -392,35 +607,20 @@ section#first-section , section#footer-section{
       right: 5%;
     }
   }
-  .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 15;
-    top: 0;
-    right: 0;
-    overflow-x: hidden;
-    transition: 0.5s linear;
-  }
-
-  .overlay .closebtn {
-    top: 20px;
-    left: 25%;
-    font-size: 60px;
-    svg{
-      position:absolute;
-      left: 10%;
+  .visit{
+    height: 220px;
+    width: 100%;
+    background: url("../image-mobile/Symptom2.png") center no-repeat;
+    a.rounded-box-link{
+      top: 5%;
+      right: 5%;
     }
   }
-  .visit{
-    @extend .consultation;
-    background: url("../image-mobile/Symptom2.png") center no-repeat;
-  }
-  owl-carousel{
-    max-height: 250px !important;
+  .owl-carousel{
+    max-height: 270px !important;
   }
   .owl-stage-outer {
-    height: 200px;
+    height: 250px;
   }
   .reliability{
     width: 91px;
@@ -487,5 +687,124 @@ section#first-section , section#footer-section{
 
 
 @media (min-width: 576px) and (max-width: 767.98px){
+  .logo{
+    max-height:50px;
+  }
+  h5{
+    font-size: 17px;
+  }
+  .most-popular{
+    .circle{
+      border-radius: 50%;
+      margin: 0px auto;
+      width:90px;
+      height:90px;
+      z-index: 50;
+      img{
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+      }
+    }
+  }
+  .popular-search-mobile{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 768px) and (max-width: 992px){
+  .most-popular{
+    .circle{
+      border-radius: 50%;
+      -webkit-transition: all .5s;
+      transition: all .5s;
+      width:100px;
+      height:100px;
+      z-index: 50;
+      img{
+        width: 90px;
+        height: 90px;
+        padding: 10px;
+      }
+    }
+    .line-shape{
+      z-index: -5;
+      position: absolute;
+      top: 90%;
+      width: 1px;
+      height: 45px;
+      border: .5px solid lighten($gray-200,20%);
+      -webkit-transition: all .3s;
+      transition: all .3s;
+    }
+    .popular-title{
+      -webkit-transition: all .5s;
+      /* Safari prior 6.1 */
+      transition: all .5s;
+    }
+    :hover{
+      .circle{
+        //box-shadow:  2px 2px $blue-color !important;
+        transform: scale(1.3);
+      }
+      .popular-title{
+        font-weight: bold !important;
+        color: $black-color;
+        position: relative;
+        transform: translateY(-20px);
+      }
+      .line-shape{
+        border: 1px solid $gray-200;
+      }
+    }
+  }
+
+}
+@media (min-width: 992px){
+  .most-popular{
+    .circle{
+      border-radius: 50%;
+      -webkit-transition: all .5s;
+      transition: all .5s;
+      width:100px;
+      height:100px;
+      z-index: 50;
+      img{
+        width: 90px;
+        height: 90px;
+        padding: 10px;
+      }
+    }
+    .line-shape{
+      z-index: -5;
+      position: absolute;
+      top: 90%;
+      width: 1px;
+      height: 45px;
+      border: .5px solid lighten($gray-200,20%);
+      -webkit-transition: all .3s;
+      transition: all .3s;
+    }
+    .popular-title{
+      -webkit-transition: all .5s;
+      /* Safari prior 6.1 */
+      transition: all .5s;
+    }
+    :hover{
+      .circle{
+        //box-shadow:  2px 2px $blue-color !important;
+        transform: scale(1.3);
+      }
+      .popular-title{
+        font-weight: bold !important;
+        color: $black-color;
+        position: relative;
+        transform: translateY(-20px);
+      }
+      .line-shape{
+        border: 1px solid $gray-200;
+      }
+    }
+  }
 
 }
