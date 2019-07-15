@@ -15,15 +15,15 @@
 <!--first section-->
 
 <section id="first-section">
-    <div class="container-fluid px-0 h-100 d-block">
+    <div class="container-fluid px-0 h-100 d-block" id="app1">
         <div class="row mx-0 bg-white shadow-sm">
-            <div class="container w-100 d-flex align-items-center justify-content-between py-3" id="app1">
+            <div class="container w-100 d-flex align-items-center justify-content-between py-3" >
                 <div class="position-relative ml-0">
                     <a href="javascript:void(0)" class="menu-button" title="منو"> <i data-feather="align-justify"></i> </a>
                 </div>
-                <div id="myNav" class="menu border-left">
-                    <a href="javascript:void(0)" class="menu-close"><i class="float-left" data-feather="x"></i></a>
-                    <ul class="list-unstyled menu-box ">
+                <div id="myNav" class="nav-menu border-left bg-white active">
+                    <a href="javascript:void(0)" class="menu-close position-absolute"><i class="float-left" data-feather="x"></i></a>
+                    <ul class="list-unstyled menu-box text-medium">
                         <li v-for="menu in menus" class="p-3"><a href="#" class="p-3"> {{menu}} </a></li>
                     </ul>
                 </div>
@@ -31,7 +31,29 @@
                     <a href="#" class="" title="درمانکده"><img class="h-100" src="../../assets/home/images/darmankade.png" alt="درمانکده"></a>
                 </div>
                 <div class="position-relative mr-0 search-icon">
-                    <a href="" title="سرچ کنید"> <i data-feather="search"></i> </a>
+                    <a href="javascript:void(1)" class="search-menu-button" title="سرچ کنید" data-toggle="modal" data-target="#myModal"> <i data-feather="search"></i> </a>
+                </div>
+<!--modal-->
+                <div class="modal fade mb-4" id="myModal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content rounded-top">
+                            <!-- Modal Header -->
+                            <div class="modal-header text-center">
+                                <i data-feather="minus" class="rounded mx-auto" style="width: 120px; height: 20px"></i>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body border-0">
+                                <div id="searchModal" class="search-Modal p-3 h-100 bg-white active">
+                                    <input type="text" class="form-control text-medium h-100 rounded position-absolute mx-auto d-inline-block border-left-0 text-small text-gray-200"  id="myInput1" onclick="showDiv1()" onkeyup="filterFunction()" title=" نام پزشک، تخصص یا بیماری" placeholder=" نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                                    <div id="myDropdown1" class="dropdown-content1 rounded mb-4 bg-white w-100">
+                                        <ul class="list-unstyled text-right">
+                                            <a href="" v-for="list in lists"><li class="searchFilter w-100" >{{list.name}}</li></a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,7 +65,12 @@
                 </div>
 
                 <div class="input-group search-input mx-auto">
-                    <input type="text" class="form-control text-medium h-100 rounded position-absolute w-100 d-inline-block border-left-0 text-small text-gray-200" title=" نام پزشک، تخصص یا بیماری" placeholder=" نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                    <input type="text" class="form-control text-medium h-100 rounded position-absolute w-100 d-inline-block border-left-0 text-small text-gray-200"  id="myInput" onclick="showDiv()" onkeyup="filterFunction()" title=" نام پزشک، تخصص یا بیماری" placeholder=" نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                    <div id="myDropdown" class="dropdown-content bg-white border rounded">
+                        <ul class="list-unstyled text-right">
+                            <a href="" v-for="list in lists"><li class="searchFilter w-100" >{{list.name}}</li></a>
+                        </ul>
+                    </div>
                     <div class="input-group-append  position-relative mr-auto">
                         <button type="submit" class="btn px-3 text-medium btn-primary text-white search-btn rounded-left"> <i data-feather="search"></i> </button>
                     </div>

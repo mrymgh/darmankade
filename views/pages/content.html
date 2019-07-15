@@ -1,0 +1,188 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="پلتفرم درمانکده به عنوان سیستم نوبت دهی مطب پزشکان این فرصت را برای شما فراهم می‌سازد تا به سادگی و تنها با چند کلیک درخواست نوبت دهی آنلاین خود را برای تخصص ‌‌های مختلف ثبت کنید.">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/pages/css/style.css">
+    <title></title>
+</head>
+<body>
+<section id="first-section">
+<header id="app1">
+    <div class="container-fluid border-bottom">
+        <div class="container">
+            <div class="row align-items-center py-3">
+                <div class="logo position-relative float-right my-auto">
+                    <a href="#" class="" title="درمانکده"><img class="h-100" src="../../assets/home/images/darmankade.png" alt="درمانکده"></a>
+                </div>
+                <div class="search-page position-relative mx-auto d-inline-block">
+                    <input type="text" class="form-control rounded position-absolute h-100 d-inline-block border-left-0 text-small text-gray-200" onclick="showDiv()" onkeyup="filterFunction()" placeholder=" جستجوی نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                    <div id="myDropdown" class="dropdown-content bg-white rounded-20 border">
+                        <ul class="list-unstyled text-right">
+                            <a href="" v-for="list in lists"><li class="searchFilter w-100" >{{list.name}}</li></a>
+                        </ul>
+                    </div>
+                    <div class="search-btn w-25 h-100 position-relative mr-auto">
+                        <button type="submit" class="btn px-2 search-btn rounded-left text-gray-200 text-medium"> <i data-feather="search"></i> </button>
+                    </div>
+                </div>
+                <div class="position-relative float-left mr-auto ml-0 register">
+                    <button class="btn btn-outline-primary text-medium rounded-20 px-2" style="width: 150px"><i data-feather="user"></i>  ورود/ ثبت نام </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid border-bottom shadow-sm">
+        <div class="container">
+            <div class="row align-items-center py-3 text-center">
+                <nav class="navbar mx-auto py-1 my-auto navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse w-100 navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav w-100 list-inline text-right pr-0" id="header-menu">
+                            <li class="nav-item nav-link text-black px-3 border-left" v-for="menu in menus"  v-bind:title="menu"><a href="#"> {{menu}} </a></li>
+                            <li class="nav-item nav-link text-black px-3 articles">
+                                <a href=""> مجله سلامت درمانکده <i data-feather="chevron-down" class="mx-2"></i></a>
+                                <div class="mega-menu position-absolute">
+                                    <ul class="list-unstyled w-100 pr-0 bg-gray-100 py-3 border-top border-bottom shadow-sm list-inline">
+                                        <div class="row mx-0 p-3 w-75 mx-auto">
+                                            <li class="col-md-3">
+                                                <a href="" title="دلایل خستگی و بیحالی">
+                                                    <article class="card shadow-sm border rounded">
+                                                        <img class="w-100 h-auto rounded-top-20" src="../../assets/home/images/adorable-asleep-baby-2111997.png" alt="دلایل خستگی و بی حالی">
+                                                        <div>
+                                                            <h6 class="card-title p-2 text-small"> دلایل خستگی و بی حالی روزانه و راهکارهای رفع خستگی </h6>
+                                                            <i data-feather="arrow-left" class="position-relative float-left mr-auto ml-3 mb-3"></i>
+                                                        </div>
+                                                    </article>
+                                                </a>
+                                            </li>
+                                            <li class="col-md-3">
+                                                <a href="" title="دلایل خستگی و بیحالی">
+                                                    <article class="card shadow-sm border rounded">
+                                                        <img class="w-100 h-auto rounded-top-20" src="../../assets/home/images/adorable-asleep-baby-2111997.png" alt="دلایل خستگی و بی حالی">
+                                                        <div>
+                                                            <h6 class="card-title p-2 text-small"> دلایل خستگی و بی حالی روزانه و راهکارهای رفع خستگی </h6>
+                                                            <i data-feather="arrow-left" class="position-relative float-left mr-auto ml-3 mb-3"></i>
+                                                        </div>
+                                                    </article>
+                                                </a>
+                                            </li>
+                                            <li class="col-md-3">
+                                                <a href="" title="دلایل خستگی و بیحالی">
+                                                    <article class="card shadow-sm border rounded">
+                                                        <img class="w-100 h-auto rounded-top-20" src="../../assets/home/images/adorable-asleep-baby-2111997.png" alt="دلایل خستگی و بی حالی">
+                                                        <div>
+                                                            <h6 class="card-title p-2 text-small"> دلایل خستگی و بی حالی روزانه و راهکارهای رفع خستگی </h6>
+                                                            <i data-feather="arrow-left" class="position-relative float-left mr-auto ml-3 mb-3"></i>
+                                                        </div>
+                                                    </article>
+                                                </a>
+                                            </li>
+                                            <li class="col-md-3">
+                                                <a href="" title="دلایل خستگی و بیحالی">
+                                                    <article class="card shadow-sm border rounded">
+                                                        <img class="w-100 h-auto rounded-top-20" src="../../assets/home/images/adorable-asleep-baby-2111997.png" alt="دلایل خستگی و بی حالی">
+                                                        <div>
+                                                            <h6 class="card-title p-2 text-small"> دلایل خستگی و بی حالی روزانه و راهکارهای رفع خستگی </h6>
+                                                            <i data-feather="arrow-left" class="position-relative float-left mr-auto ml-3 mb-3"></i>
+                                                        </div>
+                                                    </article>
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="row mx-0 text-center">
+                                            <a href="../" title="مشاهده همه مقالات" class="btn btn-primary mx-auto rounded-20"> مشاهده همه مقالات <i data-feather="chevron-left"></i> </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</header>
+</section>
+
+<section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+
+<section>
+    <footer>
+        <div class="container-fluid bg-blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <a href="#" class="d-block logo-footer"><img class="mx-auto py-3 float-right" src="../../assets/home/images/darmankade_Vector%20with%20heart.png" alt="درمانکده"></a>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p class="text-justify text-white">
+                            سامانه نوبت دهی آنلاین مطب پزشکان و دندان پزشکان که شامل نوبت دهی و دانستنیهای سلامت می باشد.شما با ورود به حساب کاربری خدمات بیشتری دریافت خواهید کرد.
+                        </p>
+                        <div class="socials">
+                            <ul class="list-inline list-unstyled py-2 row justify-content-between px-5">
+                                <li class="social"><a href="../"> <i data-feather="instagram" class="text-white"></i> </a> </li>
+                                <li class="social"><a href=".."> <i data-feather="twitter" class="text-white"></i> </a></li>
+                                <li class="social"><a href=""> <i data-feather="linkedin" class="text-white"></i> </a> </li>
+                                <li class="social"><a href=""> <i data-feather="send" class="text-white"></i> </a> </li>
+                                <li class="social"><a href=""> <i data-feather="mail" class="text-white"></i> </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="list-unstyled pr-0 text-right">
+                                    <li class="border-top text-center py-2"><a class="text-white" href="">راهنمای دریافت نوبت</a></li>
+                                    <li class="border-top text-center py-2"><a class="text-white" href="">سوالات متداول</a></li>
+                                    <li class="border-top text-center py-2"><a class="text-white" href="">قوانین و مقررات</a></li>
+                                    <li class="border-top text-center py-2"><a class="text-white" href="">شکایت</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-unstyled pr-0 text-white text-center">
+                                    <li class="border-top text-center py-2"><a class="text-white" href="">چرا درمانکده</a></li>
+                                    <li class="border-top text-center py-2"><a class="text-white" href="">درباره ما</a></li>
+                                    <li class="border-top text-center py-2"><a class="text-white" href="">تماس با ما</a></li>
+                                    <li class="border-top text-center py-2"><a class="text-white" href="">وبلاگ درمانکده</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row py-3 text-center justify-content-center">
+                            <div class="bg-white border rounded-20 mx-3 py-2">
+                                <a href="" title="نماد اعتماد الکترونیکی"><img class="reliability" src="../../assets/home/images/logo.aspx@2x.png" alt="نماد اعتماد الکترونیکی"></a>
+                            </div>
+                            <div class="bg-white border rounded-20 mx-3 py-2">
+                                <a href="" title="نشان ملی ثبت نشانه های دیجیتال"><img class="reliability" src="../../assets/home/images/logo2.aspx.png" alt="نشان ملی ثبت نشانه های دیجیتال"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+<script src="../../assets/js/jquery-3.4.1.min.js"></script>
+<script src="../../assets/js/popper.min.js"></script>
+<script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/feather.min.js"></script>
+<script src="../../assets/js/vue.min.js"></script>
+<script src="../../assets/pages/js/app.js"></script>
+</body>
+</html>

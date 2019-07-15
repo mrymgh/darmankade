@@ -1,0 +1,153 @@
+@import "variables";
+@import "fonts";
+
+a,span,p,li,ul,div,label,select,option,h1,h2,h3,h4,h5{
+  font-family: iransans;
+}
+body{
+  background: $gray-100;
+  scroll-behavior: smooth;
+}
+.text-gray-200{
+  color: $gray-200;
+}
+.bg-gray-100{
+  background-color: $gray-100;
+}
+.text-black{
+  color: $black-color;
+}
+.text-medium{
+  font-size: $medium-size;
+}
+
+.text-small{
+  font-size: $small-size;
+}
+.shadow{
+  box-shadow: 2px 1px rgba(0,0,0,0.16);
+}
+.bg-dark{
+  background-color: $black-color !important;
+}
+.text-dark{
+  color: $black-color !important;
+}
+.rounded-right-0{
+  border-top-right-radius: 0px;
+}
+.rounded-left-0{
+  border-top-left-radius: 0px;
+}
+.rounded-10{
+  border-radius: 10px;
+}
+.w-80{
+  width: 80%;
+}
+.border-blue{
+  border-color: $blue-color !important;
+}
+a{
+  color: #002c3e;
+  text-decoration: none!important;
+  :hover{
+    text-decoration: none!important;
+  }
+}
+.container{
+  margin: 0px !important;
+}
+p{
+  font-size: $medium-size;
+}
+.rounded-20{
+  border-radius: 20px;
+}
+.rounded-top-20{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#myInput{
+  width: 90%;
+  left: 4%;
+  height: 35px !important;
+}
+.logo{
+  width: 138px;
+  height: 60px;
+}
+.register{
+  left: 0!important;
+}
+.articles{
+  a{
+    min-height: 40px !important;
+  }
+  &:hover{
+    .mega-menu{
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  }
+}
+h6.card-title{
+  line-height: 32px;
+}
+.mega-menu{
+  width: 100vw;
+  left: -34.5%;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  ul{
+    margin-top: 2.2rem;
+  }
+}
+#includedContent{
+  width: 70%;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 230px;
+  top: 50px;
+  width: 75%;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 12;
+  ul a {
+    padding: 10px;
+  }
+}
+.show {display: block;}
+
+.dropdown-content1{
+  @extend .dropdown-content;
+  display: block;
+  top: 70px;
+  left: 0%;
+  border: none;
+}
+
+//footer
+.bg-blue{
+  background-color: $blue-color;
+}
+.text-blue-light{
+  color: $blue-color;
+}
+.logo-footer img{
+  width: 180px;
+}
+.social a svg{
+  width: 40px;
+  height: 40px;
+}

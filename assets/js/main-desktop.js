@@ -38,7 +38,7 @@ new Vue ({
 });
 
 new Vue ({
-  el: '.search',
+  el: '#first-section',
   data (){
     return{
       lists : [

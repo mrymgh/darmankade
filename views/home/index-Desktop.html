@@ -15,19 +15,19 @@
 </div>
 <!--first section-->
 <section id="first-section">
-    <div class="container-fluid menu h-100">
+    <div class="container-fluid h-100">
         <div class="row">
-            <div class="container d-flex align-items-center menu py-3">
+            <div class="container d-flex align-items-center py-3">
                 <div class="logo position-relative float-right my-auto">
                     <a href="#" class="" title="درمانکده"><img class="h-100" src="../../assets/home/images/darmankade.png" alt="درمانکده"></a>
                 </div>
-                <div class="d-inline-block float-right position-relative mx-3" id="includedContent">
-                    <nav class="navbar py-1 my-auto navbar-expand-lg">
+                <div class="d-inline-block position-relative" id="includedContent">
+                    <nav class="navbar w-100 py-1 my-auto navbar-expand-lg">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav list-inline text-right nav-menu pr-0" id="header-menu">
+                        <div class="collapse w-100 navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav w-100 list-inline text-right pr-0" id="header-menu">
                                 <li class="nav-item nav-link text-black px-3 border-left" v-for="menu in menus"  v-bind:title="menu"><a href="#"> {{menu}} </a></li>
                                 <li class="nav-item nav-link text-black px-3 articles">
                                     <a href=""> مجله سلامت درمانکده <i data-feather="chevron-down" class="mx-2"></i></a>
@@ -85,12 +85,12 @@
                                         </ul>
                                     </div>
                                 </li>
-                        </ul>
+                            </ul>
                         </div>
                     </nav>
                 </div>
                 <div class="position-relative float-left mr-auto ml-0 register">
-                    <button class="btn btn-outline-primary text-medium rounded-20 px-4"><i data-feather="user"></i>  ورود/ ثبت نام </button>
+                    <button class="btn btn-outline-primary text-medium rounded-20 px-2" style="width: 150px"><i data-feather="user"></i>  ورود/ ثبت نام </button>
                 </div>
 
             </div>
@@ -101,7 +101,7 @@
                     <h2 class=" position-relative search-title d-block">با درمانکده بهترین پزشک رو پیدا کن و آنلاین نوبت بگیر</h2>
                     <div class="input-group search-input mx-auto">
                         <input type="text" class="form-control rounded position-absolute h-100 w-100 d-inline-block border-left-0 text-small text-gray-200" id="myInput" onclick="showDiv()" onkeyup="filterFunction()" placeholder=" جستجوی نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
-                        <div id="myDropdown" class="dropdown-content rounded-20 border border-blue">
+                        <div id="myDropdown" class="dropdown-content bg-white rounded-20 border">
                             <ul class="list-unstyled text-right">
                                 <a href="" v-for="list in lists"><li class="searchFilter w-100" >{{list.name}}</li></a>
                             </ul>
@@ -112,11 +112,6 @@
                                     <span class="caret ml-5 text-gray-200"><i data-feather="map-pin" class="ml-3"></i> تهران </span></button>
                                 <ul class="dropdown-menu px-3 inner text-right overflow-auto text-medium" id="cities-list">
                                     <li v-for="list in lists"><a href="#">{{list.city}}</a></li>
-                                    <!--                    <li v-for=""><a href="#">اصفهان</a></li>-->
-                                    <!--                    <li v-for=""><a href="#">مشهد</a></li>-->
-                                    <!--                    <li v-for=""><a href="#">اراک</a></li>-->
-                                    <!--                    <li v-for=""><a href="#">بیرجند</a></li>-->
-                                    <!--                    <li v-for=""><a href="#">بوشهر</a></li>-->
                                 </ul>
 
                             </div>
@@ -124,9 +119,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="position-relative popular-search d-flex justify-content-between w-100" v-on:scroll="hide()">
+                <div class="position-absolute popular-search mx-auto d-flex justify-content-between">
                     <div class="row w-100 text-center justify-content-between">
-                        <div class="col-md-4 col-12 d-inline-block">
+                        <div class="col-md-4 px-0 col-12 d-inline-block">
                             <div class="row">
                                 <div class="col-4 px-3 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="کلیه" href="#">
@@ -141,10 +136,10 @@
                                     </a>
                                 </div>
                                 <div class="col-4 px-3 most-popular text-center d-inline-block">
-                                    <a class="text-gray-200" title="مغز واعصاب" href="#">
+                                    <a class="text-gray-200" title="مغز و اعصاب" href="#">
                                         <div class="popular-title">
-                                            <span class="py-3 text-small"> مغز و اعصاب </span>
-                                            <i data-feather="arrow-up"></i>
+                                            <span class="py-3 text-small"> مغزاعصاب </span>
+                                            <i data-feather="arrow-up" class=""></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
                                             <img src="../../assets/home/images/018-fetus.png" alt="مغز واعصاب">
@@ -166,7 +161,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-12 d-inline-block">
+                        <div class="col-md-4 px-0 col-12 d-inline-block">
                             <div class="row">
                                 <div class="col-4 px-23 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="کلیه" href="#">
@@ -183,8 +178,8 @@
                                 <div class="col-4 px-23 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="مغز واعصاب" href="#">
                                         <div class="popular-title">
-                                            <span class="py-3 text-small"> مغز و اعصاب </span>
-                                            <i data-feather="arrow-up"></i>
+                                            <span class="py-3 text-small">مغزاعصاب </span>
+                                            <i data-feather="arrow-up" class="text-small"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
                                             <img src="../../assets/home/images/018-fetus.png" alt="مغز واعصاب">
@@ -206,7 +201,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-12 d-inline-block">
+                        <div class="col-md-4 px-0 col-12 d-inline-block">
                             <div class="row">
                                 <div class="col-4 px-3 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="کلیه" href="#">
@@ -223,7 +218,7 @@
                                 <div class="col-4 px-3 most-popular text-center d-inline-block">
                                     <a class="text-gray-200" title="مغز واعصاب" href="#">
                                         <div class="popular-title">
-                                            <span class="py-3 text-small"> مغز و اعصاب </span>
+                                            <span class="py-3 text-small"> مغزاعصاب </span>
                                             <i data-feather="arrow-up"></i>
                                         </div>
                                         <div class="circle shadow my-3 bg-white border">
@@ -524,7 +519,6 @@
 <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
 <script src="../../assets/js/feather.min.js"></script>
 <script src="../../assets/js/vue.min.js"></script>
-<!--<script src="../../dist/build.js"></script>-->
 <script src="../../assets/js/main-desktop.js"></script>
 <script>
 </script>
