@@ -71,8 +71,12 @@ p {
 
 #myInput {
   width: 90%;
-  left: 4%;
-  height: 35px !important; }
+  left: 0%;
+  height: 50px !important; }
+
+.input-group-append {
+  height: 50px !important;
+  z-index: 20; }
 
 .logo {
   width: 138px;
@@ -112,7 +116,7 @@ h6.card-title {
   position: absolute;
   min-width: 230px;
   top: 50px;
-  width: 75%;
+  width: 100%;
   overflow: auto;
   border: 1px solid #ddd;
   z-index: 12; }
@@ -124,7 +128,6 @@ h6.card-title {
 
 .dropdown-content1 {
   display: block;
-  top: 70px;
   left: 0%;
   border: none; }
 
@@ -316,9 +319,6 @@ section#first-section, section#footer-section {
   transition: transform 0.5s ease-out;
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
 
-.search-Modal {
-  min-height: 100px; }
-
 .popular-search-mobile {
   bottom: 0%; }
 
@@ -487,7 +487,18 @@ section#first-section, section#footer-section {
     width: 100px; }
 
   .dropdown-content, .dropdown-content1 {
-    top: 20px; } }
+    width: 100%;
+    top: 50px; }
+
+  .dropdown-content1 {
+    width: 100%;
+    top: 75px; }
+
+  .search-Modal {
+    min-height: 60px; }
+
+  #myInput1 {
+    left: 0%; } }
 @media (min-width: 395px) and (max-width: 575.98px) {
   .primary-size {
     font-size: 12px; }
@@ -503,7 +514,6 @@ section#first-section, section#footer-section {
     background-size: 40% 125%; }
 
   .input-group-append.position-relative.mr-auto {
-    height: 100%;
     z-index: 20; }
 
   .most-popular .circle {
@@ -602,7 +612,9 @@ section#first-section, section#footer-section {
       transform: translateY(55px) scale3d(0.5, 0.5, 0.5); } }
   @keyframes pulse {
     to {
-      opacity: 1; } } }
+      opacity: 1; } }
+  .dropdown-content1 {
+    top: 75px; } }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .logo {
     max-height: 50px; }
@@ -623,7 +635,23 @@ section#first-section, section#footer-section {
 
   .popular-search-mobile {
     left: 50%;
-    transform: translateX(-50%); } }
+    transform: translateX(-50%); }
+
+  .consultation {
+    height: 280px;
+    width: 100%;
+    background: url("../images/doctors.png") center no-repeat; }
+    .consultation a.rounded-box-link {
+      top: 5%;
+      right: 5%; }
+
+  .visit {
+    height: 280px;
+    width: 100%;
+    background: url("../image-mobile/Symptom2.png") center no-repeat; }
+    .visit a.rounded-box-link {
+      top: 5%;
+      right: 5%; } }
 @media (min-width: 768px) and (max-width: 992px) {
   .most-popular .circle {
     border-radius: 50%;

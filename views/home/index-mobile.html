@@ -23,7 +23,7 @@
                 </div>
                 <div id="myNav" class="nav-menu border-left bg-white active">
                     <a href="javascript:void(0)" class="menu-close position-absolute"><i class="float-left" data-feather="x"></i></a>
-                    <ul class="list-unstyled menu-box text-medium">
+                    <ul class="list-unstyled px-1 menu-box text-medium">
                         <li v-for="menu in menus" class="p-3"><a href="#" class="p-3"> {{menu}} </a></li>
                     </ul>
                 </div>
@@ -44,7 +44,7 @@
                             <!-- Modal body -->
                             <div class="modal-body border-0">
                                 <div id="searchModal" class="search-Modal p-3 h-100 bg-white active">
-                                    <input type="text" class="form-control text-medium h-100 rounded position-absolute mx-auto d-inline-block border-left-0 text-small text-gray-200"  id="myInput1" onclick="showDiv1()" onkeyup="filterFunction()" title=" نام پزشک، تخصص یا بیماری" placeholder=" نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                                    <input type="text" class="form-control text-medium h-100 rounded d-block mx-auto border text-gray-200"  id="myInput1" onclick="showDiv1()" onkeyup="filterFunction()" title=" نام پزشک، تخصص یا بیماری" placeholder=" نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
                                     <div id="myDropdown1" class="dropdown-content1 rounded mb-4 bg-white w-100">
                                         <ul class="list-unstyled text-right">
                                             <a href="" v-for="list in lists"><li class="searchFilter w-100" >{{list.name}}</li></a>
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="container h-50">
-            <div class="row mx-0 align-items-center my-5 mt-sm-5">
+            <div class="row mx-0 align-items-center my-5 mt-sm-3 mb-sm-2 mt-md-2">
                 <div class="title my-4">
                     <h4 class=""> با درمانکده </h4>
                     <h5 class="d-block"> بهترین پزشک را پیدا کن </h5>
@@ -71,8 +71,8 @@
                             <a href="" v-for="list in lists"><li class="searchFilter w-100" >{{list.name}}</li></a>
                         </ul>
                     </div>
-                    <div class="input-group-append  position-relative mr-auto">
-                        <button type="submit" class="btn px-3 text-medium btn-primary text-white search-btn rounded-left"> <i data-feather="search"></i> </button>
+                    <div class="input-group-append h-100 position-relative mr-auto">
+                        <button type="submit" class="btn px-4 h-100 text-medium btn-primary text-white search-btn rounded-left"> <i data-feather="search"></i> </button>
                     </div>
                 </div>
             </div>
@@ -170,20 +170,6 @@
     </div>
 </section>
 
-<!--<section>-->
-<!--    <div class="container">-->
-<!--        <a href="#" class="menu-button">Menu</a>-->
-<!--        <nav class="menu active">-->
-<!--            <a href="#" class="menu-close">×</a>-->
-<!--            <ul class="menu-box">-->
-<!--                <li><a href="#">عبیسابتسشباتشسبشسب </a></li>-->
-<!--                <li><a href="#">بیسشتاب شتس    تبیساشتبا ش بسیتشاب تنسشابo</a></li>-->
-<!--                <li><a href="#">بیسشابسش ب تبیسشا نباتشس نبتنشستمبت</a></li>-->
-<!--            </ul>-->
-<!--        </nav>-->
-<!--    </div>-->
-<!--</section>-->
-<!--second section-->
 <section id="second-section">
     <div class="container px-0 pr-3 w-100">
         <div class="d-block pl-3">

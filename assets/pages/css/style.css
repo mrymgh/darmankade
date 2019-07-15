@@ -71,8 +71,12 @@ p {
 
 #myInput {
   width: 90%;
-  left: 4%;
-  height: 35px !important; }
+  left: 0%;
+  height: 50px !important; }
+
+.input-group-append {
+  height: 50px !important;
+  z-index: 20; }
 
 .logo {
   width: 138px;
@@ -112,7 +116,7 @@ h6.card-title {
   position: absolute;
   min-width: 230px;
   top: 50px;
-  width: 75%;
+  width: 100%;
   overflow: auto;
   border: 1px solid #ddd;
   z-index: 12; }
@@ -124,7 +128,6 @@ h6.card-title {
 
 .dropdown-content1 {
   display: block;
-  top: 70px;
   left: 0%;
   border: none; }
 
