@@ -12,5 +12,18 @@
   top: 7%;
 }
 .mega-menu{
-  left: -17%;
+  left: -17.4%;
+}
+.reliability{
+  width: 110px;
+  height: auto;
+}
+.banner{
+  min-height: 300px;
+}
+@media (min-width: 10px) and (max-width: 395px) {
+  .reliability{
+    width: 75px;
+    height: auto;
+  }
 }

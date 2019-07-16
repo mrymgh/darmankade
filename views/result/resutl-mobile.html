@@ -1,0 +1,104 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="پلتفرم درمانکده به عنوان سیستم نوبت دهی مطب پزشکان این فرصت را برای شما فراهم می‌سازد تا به سادگی و تنها با چند کلیک درخواست نوبت دهی آنلاین خود را برای تخصص ‌‌های مختلف ثبت کنید.">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/home/css/style.css">
+    <title> نتایج </title>
+</head>
+<body>
+<section id="first-section">
+    <div class="container-fluid px-0 h-100 d-block" id="app1">
+        <div class="row mx-0 bg-white shadow-sm">
+            <div class="container w-100 d-flex align-items-center justify-content-between py-3" >
+                <div class="position-relative ml-0">
+                    <a href="javascript:void(0)" class="menu-button" title="منو"> <i data-feather="align-justify"></i> </a>
+                </div>
+                <div id="myNav" class="nav-menu border-left bg-white active">
+                    <a href="javascript:void(0)" class="menu-close position-absolute"><i class="float-left" data-feather="x"></i></a>
+                    <ul class="list-unstyled px-1 menu-box text-medium">
+                        <li v-for="menu in menus" class="p-3"><a href="#" class="p-3"> {{menu}} </a></li>
+                    </ul>
+                </div>
+                <div class="logo text-center position-relative">
+                    <a href="#" class="" title="درمانکده"><img class="h-100" src="../../assets/home/images/darmankade.png" alt="درمانکده"></a>
+                </div>
+                <div class="position-relative mr-0 search-icon">
+                    <a href="javascript:void(1)" class="search-menu-button" title="سرچ کنید" data-toggle="modal" data-target="#myModal"> <i data-feather="search"></i> </a>
+                </div>
+                <!--modal-->
+                <div class="modal fade mb-4" id="myModal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content rounded-top">
+                            <!-- Modal Header -->
+                            <div class="modal-header text-center">
+                                <i data-feather="minus" class="rounded mx-auto" style="width: 120px; height: 20px"></i>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body border-0">
+                                <div id="searchModal" class="search-Modal p-3 h-100 bg-white active">
+                                    <input type="text" class="form-control text-medium h-100 rounded d-block mx-auto border text-gray-200"  id="myInput1" onclick="showDiv1()" onkeyup="filterFunction()" title=" نام پزشک، تخصص یا بیماری" placeholder=" نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
+                                    <div id="myDropdown1" class="dropdown-content1 rounded mb-1 bg-white w-100">
+                                        <ul class="list-unstyled text-right">
+                                            <a href="" v-for="list in lists"><li class="searchFilter w-100" >{{list.name}}</li></a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer>
+    <div class="container-fluid bg-blue">
+        <div class="container row mx-0 py-3">
+            <div class="col-12 text-center logo-footer">
+                <a href="" title="درمانکده"><img src="../../assets/home/images/darmankade_Vector%20with%20heart.png" alt="درمانکده"></a>
+            </div>
+            <div class="col-12 text-white text-center text-small pt-3 description-footer">
+                <p class="text-medium"> درمانکده، درمانگاه یا مطب خاصی نیست و یک سایت نوبت دهی برای مطب پزشکان است. </p>
+            </div>
+            <div class="col-12 row py-3 px-0 mx-auto text-center justify-content-center">
+                <div class="bg-white border rounded-20 mx-2 mx-sm-3 py-2">
+                    <a href="" title="نماد اعتماد الکترونیکی"><img class="reliability" src="../../assets/home/images/logo.aspx@2x.png" alt="نماد اعتماد الکترونیکی"></a>
+                </div>
+                <div class="bg-white border rounded-20 mx-2 mx-sm-3 py-2">
+                    <a href="" title="نشان ملی ثبت نشانه های دیجیتال"><img class="reliability" src="../../assets/home/images/logo2.aspx.png" alt="نشان ملی ثبت نشانه های دیجیتال"></a>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="socials">
+                    <ul class="list-inline d-flex mx-0 px-0 list-unstyled py-2 row justify-content-between">
+                        <li class="social rounded-circle border border-white p-2"><a href="../" title="ایمیل ما"> <i data-feather="mail"  class="text-white"></i> </a> </li>
+                        <li class="social rounded-circle border border-white p-2"><a href=".." title="تلفن مل"> <i data-feather="phone" class="text-white"></i> </a></li>
+                        <li class="social rounded-circle border border-white p-2"><a href="" title="اینستاگرام ما"> <i data-feather="instagram" class="text-white"></i> </a> </li>
+                        <li class="social rounded-circle border border-white p-2"><a href="" title=" تلگرام ما"> <i data-feather="send" class="text-white"></i> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copy-write bg-dark">
+    <div class="container row py-1 mx-0 h-100 text-white">
+        <p class="text-medium d-flex  align-items-center mx-auto mb-0">تمامی حقوق این سایت برای درمانکده محفوظ است </p>
+        <p class="float-left primary-size mb-0 mr-auto d-none"> طراحی شده با <i data-feather="heart" class="text-danger"></i> توسط تیم درمانکده </p>
+    </div>
+</div>
+<script src="../../assets/js/jquery-3.4.1.min.js"></script>
+<script src="../../assets/js/popper.min.js"></script>
+<script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/feather.min.js"></script>
+<script src="../../assets/js/vue.min.js"></script>
+<script src="../../assets/pages/js/app.js"></script>
+</body>
+</html>

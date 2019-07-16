@@ -5,20 +5,21 @@
   src: url("../../fonts/irsans.eot");
   src: url("../../fonts/irsans.eot?#iefix") format("embedded-opentype"), url("../../fonts/irsans.woff2") format("woff2"), url("../../fonts/irsans.woff") format("woff"), url("../fonts/irsans.ttf") format("truetype"); }
 a, span, p, li, ul, div, label, select, option, h1, h2, h3, h4, h5 {
-  font-family: iransans; }
+  font-family: iransans;
+  color: #323846; }
 
 body {
-  background: #f8f7ef;
+  background: #fbf9f3;
   scroll-behavior: smooth; }
 
 .text-gray-200 {
   color: #757575; }
 
 .bg-gray-100 {
-  background-color: #f8f7ef; }
+  background-color: #fbf9f3; }
 
 .text-black {
-  color: #00234b; }
+  color: #323846; }
 
 .text-medium {
   font-size: 16px; }
@@ -30,10 +31,10 @@ body {
   box-shadow: 2px 1px rgba(0, 0, 0, 0.16); }
 
 .bg-dark {
-  background-color: #00234b !important; }
+  background-color: #323846 !important; }
 
 .text-dark {
-  color: #00234b !important; }
+  color: #323846 !important; }
 
 .rounded-right-0 {
   border-top-right-radius: 0px; }
@@ -51,7 +52,7 @@ body {
   border-color: #2fc2df !important; }
 
 a {
-  color: #002c3e;
+  color: #323846;
   text-decoration: none !important; }
   a :hover {
     text-decoration: none !important; }
@@ -131,6 +132,26 @@ h6.card-title {
   left: 0%;
   border: none; }
 
+.plus:before {
+  content: "+";
+  font-size: 25px;
+  font-style: initial; }
+
+.minus:before {
+  content: "-";
+  font-size: 30px;
+  font-style: initial; }
+
+.breadcrumb-item {
+  color: #2fc2df; }
+  .breadcrumb-item a {
+    color: #2fc2df; }
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '>';
+  margin-left: .3rem;
+  font-size: 1rem; }
+
 .bg-blue {
   background-color: #2fc2df; }
 
@@ -143,6 +164,9 @@ h6.card-title {
 .social a svg {
   width: 40px;
   height: 40px; }
+
+.copy-write {
+  height: 20px; }
 
 .menu {
   min-height: 95px; }
@@ -289,10 +313,6 @@ ol.carousel-indicators {
 
 .Newsletter-btn {
   left: -83%; }
-
-.reliability {
-  width: 110px;
-  height: auto; }
 
 .copy-write {
   min-height: 20px; }
@@ -681,7 +701,7 @@ section#first-section, section#footer-section {
     transform: scale(1.3); }
   .most-popular :hover .popular-title {
     font-weight: bold !important;
-    color: #00234b;
+    color: #323846;
     position: relative;
     transform: translateY(-20px); }
   .most-popular :hover .line-shape {
@@ -715,7 +735,7 @@ section#first-section, section#footer-section {
     transform: scale(1.3); }
   .most-popular :hover .popular-title {
     font-weight: bold !important;
-    color: #00234b;
+    color: #323846;
     position: relative;
     transform: translateY(-20px); }
   .most-popular :hover .line-shape {

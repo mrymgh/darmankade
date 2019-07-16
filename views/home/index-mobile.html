@@ -45,7 +45,7 @@
                             <div class="modal-body border-0">
                                 <div id="searchModal" class="search-Modal p-3 h-100 bg-white active">
                                     <input type="text" class="form-control text-medium h-100 rounded d-block mx-auto border text-gray-200"  id="myInput1" onclick="showDiv1()" onkeyup="filterFunction()" title=" نام پزشک، تخصص یا بیماری" placeholder=" نام پزشک، تخصص یا بیماری" aria-label="Text input with segmented dropdown button">
-                                    <div id="myDropdown1" class="dropdown-content1 rounded mb-4 bg-white w-100">
+                                    <div id="myDropdown1" class="dropdown-content1 rounded mb-1 bg-white w-100">
                                         <ul class="list-unstyled text-right">
                                             <a href="" v-for="list in lists"><li class="searchFilter w-100" >{{list.name}}</li></a>
                                         </ul>
@@ -293,7 +293,7 @@
         <div class="row mx-0 rounded-20 p-3 pb-0 border border-blue bg-blue-light">
             <div class="col-6 text-medium download-app">
                 <h5> دانلود اپلیکیشن درمانکده </h5>
-                <ul class="list-unstyled mr-0 h-25">
+                <ul class="list-unstyled mr-0 pr-0 h-25">
                     <li>کارآیی بهتر درآپ</li>
                     <li>کارآیی بهتر درآپ</li>
                     <li>کارآیی بهتر درآپ</li>
@@ -310,11 +310,10 @@
             <div class="panel-group my-4" id="accordion">
                 <div class="panel panel-default bg-white my-2 py-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title my-auto pr-3 text-medium">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                <!--                <i class="feather-plus" data-feather="plus"></i>-->
-                                <!--                <i class="feather-minus" data-feather="minus"></i>-->
-                                درمانکده
+                        <h4 class="panel-title my-auto px-3 text-medium">
+                            <a class="accordion-toggle d-flex align-items-center justify-content-between" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                <span>درمانکده</span>
+                                <i class="plus"></i>
                             </a>
                         </h4>
                     </div>
@@ -326,10 +325,10 @@
                 </div>
                 <div class="panel panel-default bg-white my-2 py-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title pr-3 my-auto text-medium">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                <span class="glyphicon glyphicon-plus"></span>
-                                برای بیماران
+                        <h4 class="panel-title pr-3 my-auto text-medium px-3 text-medium">
+                            <a class="accordion-toggle d-flex align-items-center justify-content-between" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                <span>برای بیماران</span>
+                                <i class="plus"></i>
                             </a>
                         </h4>
                     </div>
@@ -341,10 +340,10 @@
                 </div>
                 <div class="panel panel-default bg-white my-2 py-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title pr-3 my-auto text-medium">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                <span class="glyphicon glyphicon-plus"></span>
-                                برای پزشکان
+                        <h4 class="panel-title pr-3 my-auto text-medium px-3 text-medium">
+                            <a class="accordion-toggle d-flex align-items-center justify-content-between" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                <span>برای پزشکان</span>
+                                <i class="plus"></i>
                             </a>
                         </h4>
                     </div>
@@ -356,10 +355,10 @@
                 </div>
                 <div class="panel panel-default bg-white my-2 py-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title my-auto pr-3 text-medium">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                                <span class="glyphicon glyphicon-plus"></span>
-                                برای کلینیک ها
+                        <h4 class="panel-title my-auto pr-3 text-medium px-3 text-medium">
+                            <a class="accordion-toggle d-flex align-items-center justify-content-between" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                <span>برای کلینیک ها</span>
+                                <i class="plus"></i>
                             </a>
                         </h4>
                     </div>
@@ -371,10 +370,10 @@
                 </div>
                 <div class="panel panel-default bg-white my-2 py-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title pr-3 text-medium">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-                                <span class="glyphicon glyphicon-plus"></span>
-                                برای منشی ها
+                        <h4 class="panel-title pr-3 mb-0 text-medium px-3 text-medium">
+                            <a class="d-flex align-items-center justify-content-between accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                                <span>برای منشی ها</span>
+                                <i class="plus"></i>
                             </a>
                         </h4>
                     </div>

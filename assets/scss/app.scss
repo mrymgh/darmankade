@@ -3,7 +3,9 @@
 
 a,span,p,li,ul,div,label,select,option,h1,h2,h3,h4,h5{
   font-family: iransans;
+  color: $black-color;
 }
+
 body{
   background: $gray-100;
   scroll-behavior: smooth;
@@ -49,7 +51,7 @@ body{
   border-color: $blue-color !important;
 }
 a{
-  color: #002c3e;
+  color: $black-color;
   text-decoration: none!important;
   :hover{
     text-decoration: none!important;
@@ -139,7 +141,27 @@ h6.card-title{
   left: 0%;
   border: none;
 }
-
+.plus:before{
+  content:"+";
+  font-size: 25px;
+  font-style: initial;
+}
+.minus:before{
+  content:"-";
+  font-size: 30px;
+  font-style: initial;
+}
+.breadcrumb-item{
+  color: $blue-color;
+  a{
+    color: $blue-color;
+  }
+}
+.breadcrumb-item+.breadcrumb-item::before{
+  content: '>';
+  margin-left: .3rem;
+  font-size: 1rem;
+}
 //footer
 .bg-blue{
   background-color: $blue-color;
@@ -153,4 +175,7 @@ h6.card-title{
 .social a svg{
   width: 40px;
   height: 40px;
+}
+.copy-write{
+  height: 20px;
 }

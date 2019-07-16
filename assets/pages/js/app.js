@@ -14,3 +14,38 @@ new Vue ({
     }
   }
 })
+
+$(function(){
+  var includes = $('[data-include]');
+  jQuery.each(includes, function(){
+    var file = '../fixed-sections/' + $(this).data('include') + '.html';
+    $(this).load(file);
+  });
+});
+
+function moveScroller() {
+  var $anchor = $("#first-section");
+  var $scroller = $('.modal');
+
+  var move = function() {
+    var st = $(window).scrollTop();
+    var ot = $anchor.offset().top;
+    if(st > ot) {
+      $scroller.css({
+        position: "fixed",
+        top: "0px"
+      });
+    } else {
+      $scroller.css({
+        position: "relative",
+        top: ""
+      });
+    }
+  };
+  $(window).scroll(move);
+  move();
+}
+
+$(function() {
+  moveScroller();
+});

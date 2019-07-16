@@ -1,20 +1,4 @@
-// import Vue from 'vue'
-// import App from './App.vue'
-// import VueFeather from 'vue-feather';
-//
-// Vue.use(VueFeather);
-// // Or
-// Vue.component(VueFeather.name, VueFeather);
-// // Or
-// Vue.component('vue-feather', VueFeather);
-//
-// new Vue({
-//   name:'app',
-//   render: h => h(App)
-// })
-//
-// feather.replace()
-// let mobileMenu = document.getElementById('mobile-menu')
+
 
 
 $(document).ready(function() {
@@ -30,16 +14,30 @@ new Vue ({
     return{
       menus:[ 'جستجو پزشکان','بیمارستان ها' , 'داروها' , 'تست سلامت', 'گروه های خونی', 'مجله سلامت درمانکده'],
       lists : [
-        {name:"عباس نبوی", job:"پزشک", city:"اقدسیه"},
+        {name:"عباس نبوی", job:"پزشک", city:"هفت تیر"},
         {name:"حسین عسگری", job:"پیراپزشک", city:"انقلاب - فلسطین"},
         {name:"علی عسگری", job:"پزشک", city:"انقلاب - فلسطین"},
         {name:"ممد عسگری", job:"دندان پزشک", city:"ری- تهرانپارس"},
         {name:"گیسو عسگری", job:"پیراپزشک", city:"جردن"},
+        {name:"ژاله حسنی", job:"پیراپزشک", city:"افسریه"},
+        {name:"نقی معمولی", job:"پیراپزشک", city:"افسریه"},
+        {name:"تقی صفایی", job:"پیراپزشک", city:"افسریه"},
+        {name:"اسم رنندم ", job:"پیراپزشک", city:"افسریه"},
+        {name:"ژاله رندم", job:"پیراپزشک", city:"افسریه"},
+        {name:"اسم عسگری", job:"پیراپزشک", city:"افسریه"},
+        {name:"رندم اسم", job:"پیراپزشک", city:"افسریه"},
         {name:"ژاله عسگری", job:"پیراپزشک", city:"افسریه"}
-      ]
+      ],
     }
-  }
+  },
+
 })
+
+jQuery('.panel-title .accordion-toggle').click(function() {
+  jQuery(this).find('i').toggleClass('plus minus')
+    .closest('.accordion-toggle').siblings('.accordion-toggle')
+    .find('i').removeClass('minus').addClass('plus');
+});
 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel();
