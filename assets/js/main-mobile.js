@@ -1,5 +1,12 @@
 
-
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+  if (scroll >= 500) {
+    $(".modal").addClass("overflow-hidden");
+  } else {
+    $(".modal").removeClass("overflow-hidden");
+  }
+});
 
 $(document).ready(function() {
   $(".menu-close, .menu-button").on("click", function(){

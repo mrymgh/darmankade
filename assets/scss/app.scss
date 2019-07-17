@@ -134,7 +134,6 @@ h6.card-title{
   }
 }
 .show {display: block;}
-
 .dropdown-content1{
   @extend .dropdown-content;
   display: block;
@@ -162,12 +161,22 @@ h6.card-title{
   margin-left: .3rem;
   font-size: 1rem;
 }
+.banner{
+  min-height: 250px;
+}
+.profile img{
+  max-height: 70px;
+  width: auto;
+}
 //footer
 .bg-blue{
   background-color: $blue-color;
 }
 .text-blue-light{
   color: $blue-color;
+}
+.bg-blue-light{
+  background-color: $blue-color;
 }
 .logo-footer img{
   width: 180px;
@@ -178,4 +187,25 @@ h6.card-title{
 }
 .copy-write{
   height: 20px;
+}
+.modal{
+  padding: 0px !important;
+  width: 100%;
+  overflow-y:auto ;
+  margin-bottom: 5%;
+  bottom: 5%;
+  &::-webkit-scrollbar{
+    display: none !important;
+    top: 0%;
+    left: 100%;
+    right: 0% !important;
+    direction: rtl !important;
+  }
+}
+.modal.fade .modal-dialog {
+  transform: translate3d(0, 25%, 0);
+  transition: transform 0.5s !important;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }

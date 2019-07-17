@@ -4,6 +4,9 @@
   font-weight: normal;
   src: url("../../fonts/irsans.eot");
   src: url("../../fonts/irsans.eot?#iefix") format("embedded-opentype"), url("../../fonts/irsans.woff2") format("woff2"), url("../../fonts/irsans.woff") format("woff"), url("../fonts/irsans.ttf") format("truetype"); }
+.font-bold {
+  font-weight: bold; }
+
 a, span, p, li, ul, div, label, select, option, h1, h2, h3, h4, h5 {
   font-family: iransans;
   color: #323846; }
@@ -152,11 +155,21 @@ h6.card-title {
   margin-left: .3rem;
   font-size: 1rem; }
 
+.banner {
+  min-height: 250px; }
+
+.profile img {
+  max-height: 70px;
+  width: auto; }
+
 .bg-blue {
   background-color: #2fc2df; }
 
 .text-blue-light {
   color: #2fc2df; }
+
+.bg-blue-light {
+  background-color: #2fc2df; }
 
 .logo-footer img {
   width: 180px; }
@@ -167,6 +180,26 @@ h6.card-title {
 
 .copy-write {
   height: 20px; }
+
+.modal {
+  padding: 0px !important;
+  width: 100%;
+  overflow-y: auto;
+  margin-bottom: 5%;
+  bottom: 5%; }
+  .modal::-webkit-scrollbar {
+    display: none !important;
+    top: 0%;
+    left: 100%;
+    right: 0% !important;
+    direction: rtl !important; }
+
+.modal.fade .modal-dialog {
+  transform: translate3d(0, 25%, 0);
+  transition: transform 0.5s !important;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
 
 .menu {
   min-height: 95px; }
@@ -321,23 +354,6 @@ section#first-section, section#footer-section {
   height: 100vh !important;
   width: 100% !important;
   display: inline-block; }
-
-.modal {
-  margin-bottom: 5%;
-  bottom: 5%; }
-  .modal::-webkit-scrollbar {
-    position: absolute !important;
-    top: 0%;
-    left: 100%;
-    right: 0% !important;
-    direction: rtl !important; }
-
-.modal.fade .modal-dialog {
-  transform: translate3d(0, 25%, 0);
-  transition: transform 0.5s !important;
-  transition: -webkit-transform 0.5s ease-out;
-  transition: transform 0.5s ease-out;
-  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out; }
 
 .popular-search-mobile {
   bottom: 0%; }
